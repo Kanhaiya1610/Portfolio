@@ -45,7 +45,7 @@
 }
 
 .dark-background {
-  --background-color: rgb(118, 101, 215);
+  --background-color: rgba(118, 101, 215, 0.929);
   --default-color: #ffffff;
   --heading-color: #353536;
   --surface-color: #292929f9;
