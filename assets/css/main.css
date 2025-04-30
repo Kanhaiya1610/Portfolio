@@ -47,7 +47,7 @@
 .dark-background {
   --background-color: rgba(15, 15, 15, 0.975);
   --default-color: #ffffff;
-  --heading-color: #ffffff;
+  --heading-color: #6426f4;
   --surface-color: #292929f9;
   --contrast-color: #000000;
 }
@@ -177,11 +177,12 @@ h6 {
   --background-color: rgba(0, 0, 0, 0.8);
 }
 
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
-@media (min-width: 1200px) {
+@media (min-width: 800px) {   /*--------------------------------------------------------------------prev 1200*/
   .navmenu {
     padding: 0;
   }
