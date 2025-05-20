@@ -749,7 +749,7 @@ section,
   background-color: var(--accent-color);
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .hero h2 {
     font-size: 32px;
   }
@@ -758,8 +758,8 @@ section,
     font-size: 20px;
     font-weight: bold;
     color: #ffc107;
-  }
-}
+  } 
+}*'/
 
 /*--------------------------------------------------------------
 # About Section
@@ -1379,9 +1379,7 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
+
 
 /*--------------------------------------------------------------
 # Contact Section
