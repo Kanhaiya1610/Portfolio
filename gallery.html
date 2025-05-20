@@ -100,6 +100,49 @@
       margin-bottom: 20px;
       text-align: center;
     }
+
+    /* Custom Commento Styles */
+    .commento-root .commento-main-area {
+      background: transparent !important;
+    }
+
+    .commento-root .commento-card {
+      background: rgba(255, 255, 255, 0.05) !important;
+      border-radius: 10px !important;
+      margin-bottom: 15px !important;
+    }
+
+    .commento-root .commento-name {
+      color: #4a1ba6 !important;
+    }
+
+    .commento-root .commento-timeago {
+      color: #666 !important;
+    }
+
+    .commento-root .commento-button {
+      background: #4a1ba6 !important;
+      border-radius: 5px !important;
+    }
+
+    .commento-root .commento-button:hover {
+      background: #6b3cc9 !important;
+    }
+
+    .commento-root .commento-textarea {
+      background: rgba(255, 255, 255, 0.1) !important;
+      border-radius: 5px !important;
+      color: #333 !important;
+    }
+
+    .commento-root .commento-textarea:focus {
+      border-color: #4a1ba6 !important;
+    }
+
+    .commento-root .commento-login-box {
+      background: rgba(255, 255, 255, 0.05) !important;
+      border-radius: 10px !important;
+    }
   </style>
 </head>
 
@@ -254,6 +297,20 @@
 
   <!-- Commento JS -->
   <script defer src="https://cdn.commento.io/js/commento.js"></script>
+  <script>
+    window.commento = {
+      // Enable user deletion
+      enableUserDeletion: true,
+      // Enable comment deletion
+      enableCommentDeletion: true,
+      // Delete user data on comment deletion
+      deleteUserDataOnCommentDeletion: true,
+      // Custom styling
+      theme: 'light',
+      // Enable moderation
+      moderation: true
+    };
+  </script>
 
 </body>
 </html> 
