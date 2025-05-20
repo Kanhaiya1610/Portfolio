@@ -143,6 +143,59 @@
       background: rgba(255, 255, 255, 0.05) !important;
       border-radius: 10px !important;
     }
+
+    /* Login Modal Styles */
+    .login-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-modal-content {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+    }
+
+    .login-modal-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #666;
+    }
+
+    .login-options {
+      margin-top: 20px;
+    }
+
+    .login-option {
+      display: block;
+      margin: 10px 0;
+      padding: 10px;
+      background: #4a1ba6;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .login-option:hover {
+      background: #6b3cc9;
+      color: white;
+    }
   </style>
 </head>
 
@@ -310,6 +363,50 @@
       // Enable moderation
       moderation: true
     };
+
+    // Show login modal when clicking comment box
+    document.addEventListener('DOMContentLoaded', function() {
+      const commentBox = document.querySelector('.commento-textarea');
+      if (commentBox) {
+        commentBox.addEventListener('click', function(e) {
+          e.preventDefault();
+          showLoginModal();
+        });
+      }
+    });
+
+    // Login Modal Functions
+    function showLoginModal() {
+      document.getElementById('loginModal').style.display = 'flex';
+    }
+
+    function closeLoginModal() {
+      document.getElementById('loginModal').style.display = 'none';
+    }
+
+    // Login Functions
+    function loginWithGoogle() {
+      // Implement Google login
+      closeLoginModal();
+    }
+
+    function loginWithGitHub() {
+      // Implement GitHub login
+      closeLoginModal();
+    }
+
+    function loginWithEmail() {
+      // Implement Email login
+      closeLoginModal();
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+      const modal = document.getElementById('loginModal');
+      if (event.target == modal) {
+        closeLoginModal();
+      }
+    }
   </script>
 
 </body>
