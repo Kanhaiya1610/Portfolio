@@ -32,7 +32,7 @@
 
   <style>
     .gallery-container {
-      height: 300vh; /* 3 screen heights */
+      height: 100vh;
       overflow: hidden;
       position: relative;
     }
@@ -40,7 +40,11 @@
     .gallery-scroll {
       position: absolute;
       width: 100%;
-      animation: scroll 15s linear infinite;
+      animation: scroll 9s linear infinite;
+    }
+
+    .gallery-scroll:hover {
+      animation-play-state: paused;
     }
 
     .gallery-item {
@@ -51,7 +55,7 @@
       border-style: groove;
       border-color: coral;
       box-shadow: 4px 7px 5px rgba(243, 152, 47, 0.595);
-      transition: transform 0.5s ease;
+      transition: transform 1s ease;
     }
 
     .gallery-item:hover {
@@ -80,7 +84,7 @@
         transform: translateY(0);
       }
       100% {
-        transform: translateY(-50%);
+        transform: translateY(-100%);
       }
     }
 
@@ -340,13 +344,17 @@
     /* Keep desktop styles unchanged */
     @media (min-width: 769px) {
       .gallery-container {
-        height: 300vh !important;
+        height: 100vh !important;
         overflow: hidden !important;
       }
 
       .gallery-scroll {
         position: absolute !important;
-        animation: scroll 15s linear infinite !important;
+        animation: scroll 90s linear infinite !important;
+      }
+
+      .gallery-scroll:hover {
+        animation-play-state: paused !important;
       }
     }
   </style>
@@ -431,7 +439,6 @@
               <img src="assets/img/gallery/certificate2.png" alt="Certificate 2">
               <div class="caption">MongoDB Data Modeling Intro Certificate</div>
             </div>
-            <!-- Duplicate items for infinite scroll effect -->
             <div class="gallery-item">
               <img src="assets/img/gallery/certificate3.png" alt="Certificate 3">
               <div class="caption">Oracle Certified Foundations Associate, Certificate</div>
@@ -441,8 +448,73 @@
               <div class="caption">Malware Distribution in Cyber Security</div>
             </div>
             <div class="gallery-item">
-              <img src="assets/img/gallery/achievement1.jpg" alt="Achievement 1">
-              <div class="caption">Hackathon Winner</div>
+              <img src="assets/img/gallery/linkedin-post3.png" alt="LinkedIn Post 3">
+              <div class="caption">Japanese Calligraphy Class</div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/certificate4.png" alt="Certificate 4">
+              <div class="caption">Machine Learning Course Certificate by NPTEL</div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/certificate5.jpg" alt="Certificate 5">
+              <div class="caption">Applied Generative AI Certification</div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/Linkedin-post4.jpg" alt="Linkedin-post4">
+              <div class="caption">Last Day of Japanese Lecture(Semester 5)</div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/linkedin-post5.jpg" alt="Linkedin-post5">
+              <div class="caption">At Annual Technical Fest, Cognizance, IIT ROORKEE</div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/post6.jpg" alt="Linkedin-post6">
+              <div class="caption">Last Day of Japanese Lecture(Semester 5)</div>
+            </div>
+            <!-- Duplicate items for seamless loop -->
+            <div class="gallery-item">
+              <img src="assets/img/gallery/certificate1.png" alt="Certificate 1">
+              <div class="caption">Java Full Stack Certification</div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/linkedin-post1.jpg" alt="LinkedIn Post 1">
+              <div class="caption">Last Lecture of Basic Japanese(Semester 6)</div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/certificate2.png" alt="Certificate 2">
+              <div class="caption">MongoDB Data Modeling Intro Certificate</div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/certificate3.png" alt="Certificate 3">
+              <div class="caption">Oracle Certified Foundations Associate, Certificate</div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/linkedin-post2.png" alt="LinkedIn Post 2">
+              <div class="caption">Malware Distribution in Cyber Security</div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/linkedin-post3.png" alt="LinkedIn Post 3">
+              <div class="caption">Japanese Calligraphy Class</div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/certificate4.png" alt="Certificate 4">
+              <div class="caption">Machine Learning Course Certificate by NPTEL</div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/certificate5.jpg" alt="Certificate 5">
+              <div class="caption">Applied Generative AI Certification</div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/Linkedin-post4.jpg" alt="Linkedin-post4">
+              <div class="caption">Last Day of Japanese Lecture(Semester 5)</div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/linkedin-post5.jpg" alt="Linkedin-post5">
+              <div class="caption">At Annual Technical Fest, Cognizance, IIT ROORKEE</div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/post6.jpg" alt="Linkedin-post6">
+              <div class="caption">Travelled to India Gate with friends, New Delhi</div>
             </div>
           </div>
         </div>
