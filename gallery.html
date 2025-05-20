@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio Details - Personal Bootstrap Template</title>
+  <title>Gallery - Kanhaiya Aggarwal</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -27,23 +27,90 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Personal
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Updated: Nov 04 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- Commento CSS -->
+  <link rel="stylesheet" href="https://cdn.commento.io/css/commento.css">
+
+  <style>
+    .gallery-container {
+      height: 300vh; /* 3 screen heights */
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gallery-scroll {
+      position: absolute;
+      width: 100%;
+      animation: scroll 15s linear infinite;
+    }
+
+    .gallery-item {
+      margin: 35px 0;
+      padding: 18px 18px 18px 75px;
+      background: rgba(74, 27, 166, 0.71);
+      border-radius: 10px;
+      border-style: groove;
+      border-color: coral;
+      box-shadow: 4px 7px 5px rgba(243, 152, 47, 0.595);
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(0.8);
+    }
+
+    .gallery-item img {
+      width: 95%;
+      height: auto;
+      /* padding-left: 75px; */
+      border-radius: 8px;
+      border-style: outset;
+      border-color:cornflowerblue ;
+      border-width: 5px;
+      box-shadow: 4px 7px 5px rgba(100, 148, 237, 0.632);
+    }
+
+    .gallery-item .caption {
+      margin-top: 10px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-50%);
+      }
+    }
+
+    .gallery-scroll:hover {
+      animation-play-state: paused;
+    }
+
+    /* Commento Section Styles */
+    .commento-section {
+      padding: 20px;
+      margin-bottom: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+    }
+
+    .commento-section h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  </style>
 </head>
 
-<body class="portfolio-details-page">
+<body class="gallery-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <div>
+          <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGlodWkzbTF6OGp6bXlkcjkxM2J3MWVrNWk1M3VkaWxjem9hODBtNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/IUNycHoVqvLDowiiam/giphy.gif" style="width: 85px" alt="">
+        </div>
         <h1 class="sitename">Personal</h1>
       </a>
 
@@ -54,43 +121,35 @@
           <li><a href="resume.html">Resume</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="portfolio.html">Projects</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
           <li class="dropdown"><a href="#"><span>CVs</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <!-- <li><a href="#">Checkout CVs</a></li> -->
               <li class="dropdown"><a href="#"><span>Checkout CVs</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                  <!-- <li><a href="https://docs.google.com/document/d/1g48zFSNRyRgCM79pQKdRiCPShC9dC3mV/edit?usp=sharing&ouid=111649025986708606787&rtpof=true&sd=true">View CV</a></li> -->
                   <li><a href="assets/img/portfolio/Kanhaiya_CV.pdf" target="_blank">View CV</a></li>
-                  <li><a href="assets/img/portfolio/Kanhaiya_CV.docx" download="Kanhaiya_CV" >Download CV</a></li>
+                  <li><a href="assets/img/portfolio/Kanhaiya_CV.docx" download="Kanhaiya_CV">Download CV</a></li>
                   <li><a href="#">View Video CV</a></li>
                   <li><a href="#">Download Video CV</a></li>
-                  <!-- <li><a href="#">Deep Dropdown 5</a></li> -->
                 </ul>
               </li>
-              <!-- <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li> -->
             </ul>
           </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
     </div>
   </header>
 
   <main class="main">
-
     <!-- Page Title -->
     <div class="page-title" data-aos="fade">
       <div class="heading">
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1>Portfolio Details</h1>
-              <p class="mb-0">Here you will find all the details about the projects.</p>
+              <h1>Gallery</h1>
+              <p class="mb-0">A showcase of my certificates, achievements, and memorable moments</p>
             </div>
           </div>
         </div>
@@ -99,95 +158,61 @@
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Portfolio Details</li>
+            <li class="current">Gallery</li>
           </ol>
         </div>
       </nav>
-    </div><!-- End Page Title -->
+    </div>
 
-    <!-- Portfolio Details Section -->
-    <section id="portfolio-details" class="portfolio-details section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper init-swiper">
-
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 2000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
-                }
-              </script>
-
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/app-1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/Experiment_Lain_Linux.jpeg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/helio_teams_bkgrd_5_3.webp" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/app3.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/book1.avif" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: Cypher School</li>
-                <li><strong>Project date</strong>: 01 February, 2025</li>
-                <li><strong>Project URL</strong>: <a href="https://github.com/Kanhaiya1610/">https://github.com/Kanhaiya1610/</a></li>
-              </ul>
-            </div>
-            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h5>The objective is to develop a RESTful API for a calculator application using Java and Spring Boot, enabling basic arithmetic operations with robust error handling. The project emphasizes backend best practices and local deployment for testing and integration</h5>
-              <p>
-                A RESTful API for a calculator application built with Java and Spring Boot, supporting basic arithmetic operations with error handling. Designed for backend efficiency, it is deployed locally for testing and integration.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
+    <!-- Commento Section -->
+    <section class="commento-section">
+      <div class="container">
+        <h2>Comments & Questions</h2>
+        <div id="commento" data-page-id="gallery-page"></div>
       </div>
+    </section>
 
-    </section><!-- /Portfolio Details Section -->
-
+    <!-- Gallery Section -->
+    <section class="gallery section">
+      <div class="container">
+        <div class="gallery-container">
+          <div class="gallery-scroll">
+            <!-- First set of items -->
+            <div class="gallery-item">
+              <img src="assets/img/gallery/certificate1.png" alt="Certificate 1">
+              <div class="caption">Java Full Stack Certification</div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/linkedin-post1.jpg" alt="LinkedIn Post 1">
+              <div class="caption">Last Lecture of Basic Japanese(Semester 6)</div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/certificate2.png" alt="Certificate 2">
+              <div class="caption">MongoDB Data Modeling Intro Certificate</div>
+            </div>
+            <!-- Duplicate items for infinite scroll effect -->
+            <div class="gallery-item">
+              <img src="assets/img/gallery/certificate3.png" alt="Certificate 3">
+              <div class="caption">Oracle Certified Foundations Associate, Certificate</div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/linkedin-post2.png" alt="LinkedIn Post 2">
+              <div class="caption">Malware Distribution in Cyber Security</div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/gallery/achievement1.jpg" alt="Achievement 1">
+              <div class="caption">Hackathon Winner</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer id="footer" class="footer dark-background">
     <div class="container">
       <h3 class="sitename">Personal</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+      <p>Please proceed to next section to know more about me and what i have done.</p>
       <div class="social-links d-flex justify-content-center">
         <a href="https://in.pinterest.com/kanhaiyaaggarwal/"><i class="bi bi-pinterest"></i></a>
         <a href="https://www.threads.net/@kanhaiya.aggarwal.1610"><i class="bi bi-threads"></i></a>
@@ -200,10 +225,6 @@
           <span>Copyright</span> <strong class="px-1 sitename">Personal</strong> <span>All Rights Reserved</span>
         </div>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
           Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
@@ -231,6 +252,8 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-</body>
+  <!-- Commento JS -->
+  <script defer src="https://cdn.commento.io/js/commento.js"></script>
 
-</html>
+</body>
+</html> 
