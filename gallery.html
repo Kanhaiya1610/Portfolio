@@ -284,6 +284,71 @@
       background: #6b3cc9;
       color: white;
     }
+
+    /* Responsive Gallery Styles */
+    @media (max-width: 768px) {
+      .gallery-container {
+        height: auto !important;
+        overflow: visible !important;
+      }
+
+      .gallery-scroll {
+        position: relative !important;
+        animation: none !important;
+      }
+
+      .gallery-item {
+        margin: 20px 0 !important;
+        padding: 15px !important;
+        width: 100% !important;
+      }
+
+      .gallery-item img {
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      /* Add spacing between gallery and comment section for mobile */
+      .gallery.section {
+        margin-bottom: 50px !important;
+      }
+
+      .commento-section {
+        margin-top: 30px !important;
+        padding: 15px !important;
+      }
+
+      /* Improve comment section readability on mobile */
+      .commento-root .commento-card {
+        padding: 12px !important;
+        margin-bottom: 20px !important;
+      }
+
+      .commento-root .commento-textarea {
+        font-size: 16px !important; /* Prevent zoom on iOS */
+      }
+
+      /* Adjust button sizes for better touch targets */
+      .commento-root .commento-submit-button,
+      .commento-root .commento-reply-button,
+      .commento-root .commento-login-button {
+        padding: 12px 20px !important;
+        font-size: 16px !important;
+      }
+    }
+
+    /* Keep desktop styles unchanged */
+    @media (min-width: 769px) {
+      .gallery-container {
+        height: 300vh !important;
+        overflow: hidden !important;
+      }
+
+      .gallery-scroll {
+        position: absolute !important;
+        animation: scroll 15s linear infinite !important;
+      }
+    }
   </style>
 </head>
 

@@ -34,6 +34,134 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <style>
+    /* Responsive Styles for Home Page */
+    @media (max-width: 768px) {
+      /* Profile Image Container */
+      .profile-img-container {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* Profile Image */
+      .profile-img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        border: 3px solid #4a1ba6;
+        box-shadow: 0 0 20px rgba(74, 27, 166, 0.3);
+      }
+
+      /* Hero Section */
+      .hero {
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+      }
+
+      .hero h2 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+
+      /* Social Links */
+      .social-links {
+        margin-top: 20px;
+      }
+
+      .social-links a {
+        margin: 0 10px;
+        font-size: 1.5rem;
+      }
+
+      /* About Section */
+      .about-content {
+        padding: 20px;
+      }
+
+      .about-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: justify;
+      }
+
+      /* Skills Section */
+      .skills-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 15px;
+      }
+
+      .skill-item {
+        text-align: center;
+        padding: 10px;
+        background: rgba(74, 27, 166, 0.1);
+        border-radius: 8px;
+      }
+
+      /* Contact Section */
+      .contact-info {
+        padding: 20px;
+      }
+
+      .contact-item {
+        margin-bottom: 15px;
+      }
+    }
+
+    /* Portrait Mode Specific Styles */
+    @media (max-width: 768px) and (orientation: portrait) {
+      .profile-img-container {
+        max-width: 250px;
+        margin: 20px auto;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 40px 0;
+      }
+
+      .hero-content {
+        flex-direction: column;
+      }
+
+      .hero-text {
+        order: 2;
+        margin-top: 20px;
+      }
+
+      .profile-img-container {
+        order: 1;
+      }
+    }
+
+    /* Landscape Mode Specific Styles */
+    @media (max-width: 768px) and (orientation: landscape) {
+      .hero-content {
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .profile-img-container {
+        max-width: 200px;
+      }
+
+      .hero-text {
+        text-align: left;
+      }
+    }
+  </style>
 </head>
 
 <body class="index-page">
