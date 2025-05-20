@@ -110,38 +110,126 @@
       background: rgba(255, 255, 255, 0.05) !important;
       border-radius: 10px !important;
       margin-bottom: 15px !important;
+      padding: 15px !important;
+      border: 1px solid rgba(74, 27, 166, 0.2) !important;
     }
 
     .commento-root .commento-name {
       color: #4a1ba6 !important;
+      font-weight: 600 !important;
     }
 
     .commento-root .commento-timeago {
       color: #666 !important;
+      font-size: 0.9em !important;
     }
 
-    .commento-root .commento-button {
+    /* Custom Upvote/Downvote Styles */
+    .commento-root .commento-votes {
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      margin-top: 10px !important;
+    }
+
+    .commento-root .commento-vote-button {
+      background: none !important;
+      border: none !important;
+      padding: 5px !important;
+      cursor: pointer !important;
+      transition: transform 0.2s !important;
+    }
+
+    .commento-root .commento-vote-button:hover {
+      transform: scale(1.2) !important;
+    }
+
+    .commento-root .commento-vote-button i {
+      font-size: 1.2em !important;
+      color: #4a1ba6 !important;
+    }
+
+    .commento-root .commento-vote-button.upvoted i {
+      color: #28a745 !important;
+    }
+
+    .commento-root .commento-vote-button.downvoted i {
+      color: #dc3545 !important;
+    }
+
+    /* Custom Vote Count */
+    .commento-root .commento-vote-count {
+      font-size: 0.9em !important;
+      color: #666 !important;
+      font-weight: 600 !important;
+    }
+
+    /* Custom Reply Button */
+    .commento-root .commento-reply-button {
       background: #4a1ba6 !important;
+      color: white !important;
+      border: none !important;
+      padding: 5px 15px !important;
       border-radius: 5px !important;
+      font-size: 0.9em !important;
+      transition: background 0.3s !important;
     }
 
-    .commento-root .commento-button:hover {
+    .commento-root .commento-reply-button:hover {
       background: #6b3cc9 !important;
     }
 
+    /* Custom Textarea */
     .commento-root .commento-textarea {
       background: rgba(255, 255, 255, 0.1) !important;
+      border: 1px solid rgba(74, 27, 166, 0.2) !important;
       border-radius: 5px !important;
       color: #333 !important;
+      padding: 10px !important;
+      font-size: 1em !important;
     }
 
     .commento-root .commento-textarea:focus {
       border-color: #4a1ba6 !important;
+      box-shadow: 0 0 0 2px rgba(74, 27, 166, 0.2) !important;
     }
 
+    /* Custom Submit Button */
+    .commento-root .commento-submit-button {
+      background: #4a1ba6 !important;
+      color: white !important;
+      border: none !important;
+      padding: 10px 20px !important;
+      border-radius: 5px !important;
+      font-size: 1em !important;
+      transition: background 0.3s !important;
+    }
+
+    .commento-root .commento-submit-button:hover {
+      background: #6b3cc9 !important;
+    }
+
+    /* Custom Login Box */
     .commento-root .commento-login-box {
       background: rgba(255, 255, 255, 0.05) !important;
       border-radius: 10px !important;
+      padding: 20px !important;
+      border: 1px solid rgba(74, 27, 166, 0.2) !important;
+    }
+
+    /* Custom Login Buttons */
+    .commento-root .commento-login-button {
+      background: #4a1ba6 !important;
+      color: white !important;
+      border: none !important;
+      padding: 8px 15px !important;
+      border-radius: 5px !important;
+      font-size: 0.9em !important;
+      transition: background 0.3s !important;
+    }
+
+    .commento-root .commento-login-button:hover {
+      background: #6b3cc9 !important;
     }
 
     /* Login Modal Styles */
@@ -357,11 +445,18 @@
       // Enable comment deletion
       enableCommentDeletion: true,
       // Delete user data on comment deletion
-      deleteUserDataOnCommentDeletion: true,
+      deleteUserDataOnCommentDeletion: false,
       // Custom styling
-      theme: 'light',
+      theme: 'dark',
       // Enable moderation
-      moderation: true
+      moderation: true,
+      // Custom vote icons
+      voteIcons: {
+        upvote: '<i class="bi bi-arrow-up-circle-fill"></i>',
+        downvote: '<i class="bi bi-arrow-down-circle-fill"></i>',
+        upvoted: '<i class="bi bi-arrow-up-circle"></i>',
+        downvoted: '<i class="bi bi-arrow-down-circle"></i>'
+      }
     };
 
     // Show login modal when clicking comment box
