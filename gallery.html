@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0e53d0f (chore: Remove unwanted folders from remote repository)
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -8,35 +11,54 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
 
+<<<<<<< HEAD
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
+=======
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+>>>>>>> 0e53d0f (chore: Remove unwanted folders from remote repository)
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+<<<<<<< HEAD
   <!-- Vendor CSS Files -->
+=======
+>>>>>>> 0e53d0f (chore: Remove unwanted folders from remote repository)
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
+<<<<<<< HEAD
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
   <!-- Commento CSS -->
+=======
+  <link href="assets/css/main.css" rel="stylesheet">
+
+>>>>>>> 0e53d0f (chore: Remove unwanted folders from remote repository)
   <link rel="stylesheet" href="https://cdn.commento.io/css/commento.css">
 
   <style>
     .gallery-container {
+<<<<<<< HEAD
+=======
+      display: flex;
+>>>>>>> 0e53d0f (chore: Remove unwanted folders from remote repository)
       height: 100vh;
       overflow: hidden;
       position: relative;
     }
 
+<<<<<<< HEAD
     .gallery-scroll {
       position: absolute;
       width: 100%;
@@ -44,12 +66,38 @@
     }
 
     .gallery-scroll:hover {
+=======
+    .gallery-column {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gallery-column .gallery-scroll {
+      position: absolute;
+      width: 100%;
+    }
+
+    .gallery-column.scroll-down .gallery-scroll {
+      animation: scroll-down 90s linear infinite;
+    }
+
+    .gallery-column.scroll-up .gallery-scroll {
+      animation: scroll-up 90s linear infinite;
+    }
+
+    .gallery-column:hover .gallery-scroll {
+>>>>>>> 0e53d0f (chore: Remove unwanted folders from remote repository)
       animation-play-state: paused;
     }
 
     .gallery-item {
       margin: 35px 0;
+<<<<<<< HEAD
       padding: 18px 18px 18px 75px;
+=======
+      padding: 18px;
+>>>>>>> 0e53d0f (chore: Remove unwanted folders from remote repository)
       background: rgba(74, 27, 166, 0.71);
       border-radius: 10px;
       border-style: groove;
@@ -63,12 +111,20 @@
     }
 
     .gallery-item img {
+<<<<<<< HEAD
       width: 95%;
       height: auto;
       /* padding-left: 75px; */
       border-radius: 8px;
       border-style: outset;
       border-color:cornflowerblue ;
+=======
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border-style: outset;
+      border-color: cornflowerblue;
+>>>>>>> 0e53d0f (chore: Remove unwanted folders from remote repository)
       border-width: 5px;
       box-shadow: 4px 7px 5px rgba(100, 148, 237, 0.632);
     }
@@ -79,17 +135,35 @@
       color: #ffffff;
     }
 
+<<<<<<< HEAD
     @keyframes scroll {
+=======
+    @keyframes scroll-down {
+>>>>>>> 0e53d0f (chore: Remove unwanted folders from remote repository)
       0% {
         transform: translateY(0);
       }
       100% {
+<<<<<<< HEAD
         transform: translateY(-100%);
       }
     }
 
     .gallery-scroll:hover {
       animation-play-state: paused;
+=======
+        transform: translateY(-50%); /* Adjusted to loop halfway */
+      }
+    }
+
+    @keyframes scroll-up {
+      0% {
+        transform: translateY(-50%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+>>>>>>> 0e53d0f (chore: Remove unwanted folders from remote repository)
     }
 
     /* Commento Section Styles */
@@ -292,11 +366,24 @@
     /* Responsive Gallery Styles */
     @media (max-width: 768px) {
       .gallery-container {
+<<<<<<< HEAD
+=======
+        flex-direction: column;
+>>>>>>> 0e53d0f (chore: Remove unwanted folders from remote repository)
         height: auto !important;
         overflow: visible !important;
       }
 
+<<<<<<< HEAD
       .gallery-scroll {
+=======
+      .gallery-column {
+        flex: none;
+        width: 100%;
+      }
+
+      .gallery-column .gallery-scroll {
+>>>>>>> 0e53d0f (chore: Remove unwanted folders from remote repository)
         position: relative !important;
         animation: none !important;
       }
@@ -348,18 +435,37 @@
         overflow: hidden !important;
       }
 
+<<<<<<< HEAD
       .gallery-scroll {
         position: absolute !important;
         animation: scroll 90s linear infinite !important;
       }
 
       .gallery-scroll:hover {
+=======
+      .gallery-column .gallery-scroll {
+        position: absolute !important;
+      }
+
+      .gallery-column.scroll-down .gallery-scroll {
+        animation: scroll-down 90s linear infinite !important;
+      }
+
+      .gallery-column.scroll-up .gallery-scroll {
+        animation: scroll-up 90s linear infinite !important;
+      }
+
+      .gallery-column:hover .gallery-scroll {
+>>>>>>> 0e53d0f (chore: Remove unwanted folders from remote repository)
         animation-play-state: paused !important;
       }
     }
   </style>
 </head>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0e53d0f (chore: Remove unwanted folders from remote repository)
 <body class="gallery-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
@@ -376,7 +482,10 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="resume.html">Resume</a></li>
+<<<<<<< HEAD
           <li><a href="services.html">Services</a></li>
+=======
+>>>>>>> 0e53d0f (chore: Remove unwanted folders from remote repository)
           <li><a href="portfolio.html">Projects</a></li>
           <li><a href="gallery.html" class="active">Gallery</a></li>
           <li class="dropdown"><a href="#"><span>CVs</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -399,7 +508,10 @@
   </header>
 
   <main class="main">
+<<<<<<< HEAD
     <!-- Page Title -->
+=======
+>>>>>>> 0e53d0f (chore: Remove unwanted folders from remote repository)
     <div class="page-title" data-aos="fade">
       <div class="heading">
         <div class="container">
@@ -421,6 +533,7 @@
       </nav>
     </div>
 
+<<<<<<< HEAD
     <!-- Gallery Section -->
     <section class="gallery section">
       <div class="container">
@@ -516,12 +629,27 @@
               <img src="assets/img/gallery/post6.jpg" alt="Linkedin-post6">
               <div class="caption">Travelled to India Gate with friends, New Delhi</div>
             </div>
+=======
+    <section class="gallery section">
+      <div class="container-fluid">
+        <div class="gallery-container">
+          <div class="gallery-column scroll-down">
+            <div class="gallery-scroll" id="gallery-col-1">
+              </div>
+          </div>
+          <div class="gallery-column scroll-up">
+            <div class="gallery-scroll" id="gallery-col-2">
+              </div>
+>>>>>>> 0e53d0f (chore: Remove unwanted folders from remote repository)
           </div>
         </div>
       </div>
     </section>
 
+<<<<<<< HEAD
     <!-- Commento Section -->
+=======
+>>>>>>> 0e53d0f (chore: Remove unwanted folders from remote repository)
     <section class="commento-section">
       <div class="container">
         <h2>Comments & Questions</h2>
@@ -553,6 +681,7 @@
     </div>
   </footer>
 
+<<<<<<< HEAD
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -560,6 +689,12 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
+=======
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+>>>>>>> 0e53d0f (chore: Remove unwanted folders from remote repository)
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
@@ -597,6 +732,57 @@
       }
     };
 
+<<<<<<< HEAD
+=======
+    document.addEventListener('DOMContentLoaded', function() {
+      const galleryItems = [
+        { src: "assets/img/gallery/certificate1.png", alt: "Certificate 1", caption: "Java Full Stack Certification" },
+        { src: "assets/img/gallery/linkedin-post1.jpg", alt: "LinkedIn Post 1", caption: "Last Lecture of Basic Japanese(Semester 6)" },
+        { src: "assets/img/gallery/certificate2.png", alt: "Certificate 2", caption: "MongoDB Data Modeling Intro Certificate" },
+        { src: "assets/img/gallery/certificate3.png", alt: "Certificate 3", caption: "Oracle Certified Foundations Associate, Certificate" },
+        { src: "assets/img/gallery/linkedin-post2.png", alt: "LinkedIn Post 2", caption: "Malware Distribution in Cyber Security" },
+        { src: "assets/img/gallery/linkedin-post3.png", alt: "LinkedIn Post 3", caption: "Japanese Calligraphy Class" },
+        { src: "assets/img/gallery/certificate4.png", alt: "Certificate 4", caption: "Machine Learning Course Certificate by NPTEL" },
+        { src: "assets/img/gallery/certificate5.jpg", alt: "Certificate 5", caption: "Applied Generative AI Certification" },
+        { src: "assets/img/gallery/Linkedin-post4.jpg", alt: "Linkedin-post4", caption: "Last Day of Japanese Lecture(Semester 5)" },
+        { src: "assets/img/gallery/linkedin-post5.jpg", alt: "Linkedin-post5", caption: "At Annual Technical Fest, Cognizance, IIT ROORKEE" },
+        { src: "assets/img/gallery/post6.jpg", alt: "Linkedin-post6", caption: "Travelled to India Gate with friends, New Delhi" }
+      ];
+
+      const col1 = document.getElementById('gallery-col-1');
+      const col2 = document.getElementById('gallery-col-2');
+
+            // 1. Find the midpoint to split the array
+      const midpoint = Math.ceil(galleryItems.length / 2);
+
+      // 2. Create the two halves
+      const firstHalf = galleryItems.slice(0, midpoint);
+      const secondHalf = galleryItems.slice(midpoint);
+
+      // 3. Helper function to create HTML for a list of items
+      const createColumnHtml = (items) => {
+        let html = '';
+        items.forEach(item => {
+          html += `
+            <div class="gallery-item">
+              <img src="${item.src}" alt="${item.alt}">
+              <div class="caption">${item.caption}</div>
+            </div>
+          `;
+        });
+        return html;
+      };
+      // 4. Populate each column with its images, and then duplicate them for the loop
+      const firstHalfHtml = createColumnHtml(firstHalf);
+      col1.innerHTML = firstHalfHtml + firstHalfHtml; // Original + Duplicate
+
+      const secondHalfHtml = createColumnHtml(secondHalf);
+      col2.innerHTML = secondHalfHtml + secondHalfHtml; // Original + Duplicate
+
+    });
+
+
+>>>>>>> 0e53d0f (chore: Remove unwanted folders from remote repository)
     // Show login modal when clicking comment box
     document.addEventListener('DOMContentLoaded', function() {
       const commentBox = document.querySelector('.commento-textarea');
@@ -643,4 +829,8 @@
   </script>
 
 </body>
+<<<<<<< HEAD
 </html> 
+=======
+</html>
+>>>>>>> 0e53d0f (chore: Remove unwanted folders from remote repository)
