@@ -1,6 +1,6 @@
 # Kanhaiya Aggarwal's Portfolio Website
 
-A modern, responsive portfolio website built using Bootstrap 5.3.3. This portfolio showcases my skills, projects, and professional journey as a Backend Developer and AI/ML enthusiast.
+A modern, responsive portfolio website built using Bootstrap 5.3.3. This portfolio showcases my skills, projects, and professional journey as a Backend Developer and AI/ML enthusiast. // Kanhaiya Aggarwal
 
 ## 🚀 Features
 
