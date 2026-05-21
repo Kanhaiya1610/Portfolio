@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Projects | Kanhaiya Agarwal</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Projects | Kanhaiya Aggarwal</title>
+  <meta name="description" content="Projects by Kanhaiya Aggarwal — AI/ML, Computer Vision, and Java Backend projects including LogiVoice, Stock Predictor, and Space Weather API.">
+  <meta name="keywords" content="Kanhaiya Aggarwal, projects, portfolio, AI, ML, Java, Spring Boot, Python, Computer Vision">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -37,6 +37,7 @@
 </head>
 
 <body class="portfolio-page">
+  <div id="light-rays-bg" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></div>
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
@@ -47,7 +48,7 @@
         <div>
           <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGlodWkzbTF6OGp6bXlkcjkxM2J3MWVrNWk1M3VkaWxjem9hODBtNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/IUNycHoVqvLDowiiam/giphy.gif" style="width: 85px" alt="">
         </div>
-        <h1 class="sitename">Personal</h1>
+        <h1 class="sitename">Kanhaiya Aggarwal</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -275,18 +276,18 @@
 
   <footer id="footer" class="footer dark-background">
     <div class="container">
-      <h3 class="sitename">Personal</h3>
-      <p>Please feel free to reach out to me for Projects and Freelance work.</p>
+      <h3 class="sitename">Kanhaiya Aggarwal</h3>
+      <p>Interested in collaborating? Feel free to reach out for projects and freelance work.</p>
       <div class="social-links d-flex justify-content-center">
-        <a href="https://in.pinterest.com/kanhaiyaaggarwal/"><i class="bi bi-pinterest"></i></a>
-        <a href="https://www.threads.net/@kanhaiya.aggarwal.1610"><i class="bi bi-threads"></i></a>
-        <a href="https://www.instagram.com/kanhaiya.aggarwal.1610/"><i class="bi bi-instagram"></i></a>
-        <a href="https://github.com/Kanhaiya1610"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/kanhaiya-aggarwal"><i class="bi bi-linkedin"></i></a>
+        <a href="https://in.pinterest.com/kanhaiyaaggarwal/" target="_blank" rel="noopener"><i class="bi bi-pinterest"></i></a>
+        <a href="https://www.threads.net/@kanhaiya.aggarwal.1610" target="_blank" rel="noopener"><i class="bi bi-threads"></i></a>
+        <a href="https://www.instagram.com/kanhaiya.aggarwal.1610/" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+        <a href="https://github.com/Kanhaiya1610" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/kanhaiya-aggarwal" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="container">
         <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Personal</strong> <span>All Rights Reserved</span>
+          <span>Copyright</span> <strong class="px-1 sitename">Kanhaiya Aggarwal</strong> <span>All Rights Reserved</span>
         </div>
         <div class="credits">
           <!-- All the links in the footer should remain intact. -->
@@ -319,6 +320,30 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Light Rays Script -->
+  <script src="https://resource.trickle.so/vendor_lib/ogl.iife.js"></script>
+  <script src="assets/js/light-rays.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.getElementById('light-rays-bg');
+      if (container && typeof LightRays !== 'undefined') {
+        LightRays.init(container, {
+          raysColor: '#00f0ff',
+          raysSpeed: 0.8,
+          lightSpread: 1.2,
+          rayLength: 2.5,
+          pulsating: true,
+          fadeDistance: 1.2,
+          saturation: 1.0,
+          followMouse: true,
+          mouseInfluence: 0.1,
+          distortion: 0.0,
+          raysOrigin: 'top-center'
+        });
+      }
+    });
+  </script>
 
 </body>
 

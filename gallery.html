@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Gallery - Kanhaiya Aggarwal</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Gallery | Kanhaiya Aggarwal</title>
+  <meta name="description" content="Gallery of certificates, achievements, and memorable moments from Kanhaiya Aggarwal's journey in AI/ML and software development.">
+  <meta name="keywords" content="Kanhaiya Aggarwal, gallery, certificates, achievements, AI developer">
 
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -301,6 +301,66 @@
       color: white;
     }
 
+    /* Custom Moderation Menu (Hamburger Style) */
+    .commento-root .commento-options-button {
+      background: none !important;
+      border: none !important;
+      color: #4a1ba6 !important;
+      font-size: 1.2em !important;
+      cursor: pointer !important;
+      padding: 5px !important;
+      display: flex !important;
+      align-items: center !important;
+    }
+
+    .commento-root .commento-options-dropdown {
+      background: #1a1a1a !important;
+      border: 1px solid rgba(74, 27, 166, 0.3) !important;
+      border-radius: 5px !important;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5) !important;
+      z-index: 100 !important;
+    }
+
+    .commento-root .commento-option-item {
+      color: white !important;
+      padding: 8px 15px !important;
+      transition: background 0.2s !important;
+    }
+
+    .commento-root .commento-option-item:hover {
+      background: rgba(74, 27, 166, 0.3) !important;
+    }
+
+    /* Nested Replies Hidden by Default */
+    .commento-root .commento-body-replies {
+      display: none;
+      margin-left: 20px !important;
+      border-left: 2px solid rgba(74, 27, 166, 0.2) !important;
+      padding-left: 15px !important;
+    }
+
+    .commento-root .commento-show-replies-button {
+      background: none !important;
+      border: none !important;
+      color: #4a1ba6 !important;
+      font-size: 0.9em !important;
+      font-weight: 600 !important;
+      cursor: pointer !important;
+      padding: 5px 0 !important;
+      margin-top: 10px !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 5px !important;
+    }
+
+    .commento-root .commento-show-replies-button i {
+      transition: transform 0.3s !important;
+    }
+
+    .commento-root .commento-show-replies-button.active i {
+      transform: rotate(180deg) !important;
+    }
+
     /* Responsive Gallery Styles */
     @media (max-width: 768px) {
       .gallery-container {
@@ -385,6 +445,7 @@
   </style>
 </head>
 <body class="gallery-page">
+  <div id="light-rays-bg" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></div>
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
@@ -392,7 +453,7 @@
         <div>
           <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGlodWkzbTF6OGp6bXlkcjkxM2J3MWVrNWk1M3VkaWxzem9hODBtNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/IUNycHoVqvLDowiiam/giphy.gif" style="width: 85px" alt="">
         </div>
-        <h1 class="sitename">Personal</h1>
+        <h1 class="sitename">Kanhaiya Aggarwal</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -461,26 +522,41 @@
     <section class="commento-section">
       <div class="container">
         <h2>Comments & Questions</h2>
-        <div id="commento" data-page-id="gallery-page"></div>
+        <p style="text-align: center; color: rgba(255,255,255,0.7); margin-bottom: 25px;">Have a question or want to share feedback? Drop a comment below — I'd love to hear from you.</p>
+        <div class='wbnz-comments' data-webynize-id='9712'></div>
       </div>
     </section>
 
   </main>
 
+  <!-- Login Modal -->
+  <div id="loginModal" class="login-modal">
+    <div class="login-modal-content">
+      <span class="login-modal-close" onclick="closeLoginModal()">&times;</span>
+      <h3>Login to Comment</h3>
+      <p>Please log in to join the discussion.</p>
+      <div class="login-options">
+        <a href="#" class="login-option" onclick="loginWithGoogle()">
+          <i class="bi bi-google me-2"></i> Login with Google
+        </a>
+      </div>
+    </div>
+  </div>
+
   <footer id="footer" class="footer dark-background">
     <div class="container">
-      <h3 class="sitename">Personal</h3>
-      <p>Please proceed to next section to know more about me and what i have done.</p>
+      <h3 class="sitename">Kanhaiya Aggarwal</h3>
+      <p>Enjoyed the gallery? Feel free to leave a comment or connect with me on social media.</p>
       <div class="social-links d-flex justify-content-center">
-        <a href="https://in.pinterest.com/kanhaiyaaggarwal/"><i class="bi bi-pinterest"></i></a>
-        <a href="https://www.threads.net/@kanhaiya.aggarwal.1610"><i class="bi bi-threads"></i></a>
-        <a href="https://www.instagram.com/kanhaiya.aggarwal.1610/"><i class="bi bi-instagram"></i></a>
-        <a href="https://github.com/Kanhaiya1610"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/kanhaiya-aggarwal"><i class="bi bi-linkedin"></i></a>
+        <a href="https://in.pinterest.com/kanhaiyaaggarwal/" target="_blank" rel="noopener"><i class="bi bi-pinterest"></i></a>
+        <a href="https://www.threads.net/@kanhaiya.aggarwal.1610" target="_blank" rel="noopener"><i class="bi bi-threads"></i></a>
+        <a href="https://www.instagram.com/kanhaiya.aggarwal.1610/" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+        <a href="https://github.com/Kanhaiya1610" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/kanhaiya-aggarwal" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="container">
         <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Personal</strong> <span>All Rights Reserved</span>
+          <span>Copyright</span> <strong class="px-1 sitename">Kanhaiya Aggarwal</strong> <span>All Rights Reserved</span>
         </div>
         <div class="credits">
           Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
@@ -507,29 +583,9 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <!-- Commento JS -->
-  <script defer src="https://cdn.commento.io/js/commento.js"></script>
+  <!-- Webynize Comments JS -->
+  <script defer src='https://widgets.webynize.com/comments.js'></script>
   <script>
-    window.commento = {
-      // Enable user deletion
-      enableUserDeletion: true,
-      // Enable comment deletion
-      enableCommentDeletion: true,
-      // Delete user data on comment deletion
-      deleteUserDataOnCommentDeletion: false,
-      // Custom styling
-      theme: 'dark',
-      // Enable moderation
-      moderation: true,
-      // Custom vote icons
-      voteIcons: {
-        upvote: '<i class="bi bi-arrow-up-circle-fill"></i>',
-        downvote: '<i class="bi bi-arrow-down-circle-fill"></i>',
-        upvoted: '<i class="bi bi-arrow-up-circle"></i>',
-        downvoted: '<i class="bi bi-arrow-down-circle"></i>'
-      }
-    };
-
     document.addEventListener('DOMContentLoaded', function() {
       const galleryItems = [
         { src: "assets/img/gallery/certificate1.png", alt: "Certificate 1", caption: "Java Full Stack Certification" },
@@ -621,6 +677,54 @@
         closeLoginModal();
       }
     }
+
+    // Webynize Content Observer
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.addedNodes.length > 0) {
+          handleNewComments();
+        }
+      });
+    });
+
+    function handleNewComments() {
+      // Webynize uses different classes, but we'll monitor for the container
+      const commentsContainer = document.querySelector('.wbnz-comments');
+      if (commentsContainer) {
+        // Apply any custom behavioral overrides if needed here
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const targetNode = document.querySelector('.wbnz-comments');
+      if (targetNode) {
+        observer.observe(targetNode, { childList: true, subtree: true });
+      }
+    });
+  </script>
+
+  <!-- Light Rays Script -->
+  <script src="https://resource.trickle.so/vendor_lib/ogl.iife.js"></script>
+  <script src="assets/js/light-rays.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.getElementById('light-rays-bg');
+      if (container && typeof LightRays !== 'undefined') {
+        LightRays.init(container, {
+          raysColor: '#00f0ff',
+          raysSpeed: 0.8,
+          lightSpread: 1.2,
+          rayLength: 2.5,
+          pulsating: true,
+          fadeDistance: 1.2,
+          saturation: 1.0,
+          followMouse: true,
+          mouseInfluence: 0.1,
+          distortion: 0.0,
+          raysOrigin: 'top-center'
+        });
+      }
+    });
   </script>
 
 </body>
