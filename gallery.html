@@ -25,85 +25,6 @@
   <link rel="stylesheet" href="https://cdn.commento.io/css/commento.css">
 
   <style>
-    .gallery-container {
-      display: flex;
-      height: 100vh;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .gallery-column {
-      flex: 1;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .gallery-column .gallery-scroll {
-      position: absolute;
-      width: 100%;
-    }
-
-    .gallery-column.scroll-down .gallery-scroll {
-      animation: scroll-down 90s linear infinite;
-    }
-
-    .gallery-column.scroll-up .gallery-scroll {
-      animation: scroll-up 90s linear infinite;
-    }
-
-    .gallery-column:hover .gallery-scroll {
-      animation-play-state: paused;
-    }
-
-    .gallery-item {
-      margin: 35px 0;
-      padding: 18px;
-      background: rgba(74, 27, 166, 0.71);
-      border-radius: 10px;
-      border-style: groove;
-      border-color: coral;
-      box-shadow: 4px 7px 5px rgba(243, 152, 47, 0.595);
-      transition: transform 1s ease;
-    }
-
-    .gallery-item:hover {
-      transform: scale(0.8);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      border-style: outset;
-      border-color: cornflowerblue;
-      border-width: 5px;
-      box-shadow: 4px 7px 5px rgba(100, 148, 237, 0.632);
-    }
-
-    .gallery-item .caption {
-      margin-top: 10px;
-      text-align: center;
-      color: #ffffff;
-    }
-
-    @keyframes scroll-down {
-      0% {
-        transform: translateY(0);
-      }
-      100% {
-        transform: translateY(-50%); /* Adjusted to loop halfway */
-      }
-    }
-
-    @keyframes scroll-up {
-      0% {
-        transform: translateY(-50%);
-      }
-      100% {
-        transform: translateY(0);
-      }
-    }
-
     /* Commento Section Styles */
     .commento-section {
       padding: 20px;
@@ -506,15 +427,8 @@
 
     <section class="gallery section">
       <div class="container-fluid">
-        <div class="gallery-container">
-          <div class="gallery-column scroll-down">
-            <div class="gallery-scroll" id="gallery-col-1">
-              </div>
-          </div>
-          <div class="gallery-column scroll-up">
-            <div class="gallery-scroll" id="gallery-col-2">
-              </div>
-          </div>
+        <div class="cyber-gallery-grid" id="cyber-gallery-grid">
+          <!-- Populated by JavaScript -->
         </div>
       </div>
     </section>
@@ -601,36 +515,30 @@
         { src: "assets/img/gallery/post6.jpg", alt: "Linkedin-post6", caption: "Travelled to India Gate with friends, New Delhi" }
       ];
 
-      const col1 = document.getElementById('gallery-col-1');
-      const col2 = document.getElementById('gallery-col-2');
-
-            // 1. Find the midpoint to split the array
-      const midpoint = Math.ceil(galleryItems.length / 2);
-
-      // 2. Create the two halves
-      const firstHalf = galleryItems.slice(0, midpoint);
-      const secondHalf = galleryItems.slice(midpoint);
-
-      // 3. Helper function to create HTML for a list of items
-      const createColumnHtml = (items) => {
-        let html = '';
-        items.forEach(item => {
-          html += `
-            <div class="gallery-item">
-              <img src="${item.src}" alt="${item.alt}">
-              <div class="caption">${item.caption}</div>
+      const gridContainer = document.getElementById('cyber-gallery-grid');
+      
+      let html = '';
+      galleryItems.forEach(item => {
+        html += `
+          <a href="${item.src}" class="glightbox gallery-item-link" data-gallery="gallery-collection" data-title="${item.caption}">
+            <div class="gallery-item-cyber">
+              <img src="${item.src}" alt="${item.alt}" class="img-fluid">
+              <div class="gallery-caption-cyber">
+                <span>${item.caption}</span>
+              </div>
             </div>
-          `;
+          </a>
+        `;
+      });
+      
+      gridContainer.innerHTML = html;
+      
+      // Initialize GLightbox
+      if (typeof GLightbox !== 'undefined') {
+        const lightbox = GLightbox({
+          selector: '.glightbox'
         });
-        return html;
-      };
-      // 4. Populate each column with its images, and then duplicate them for the loop
-      const firstHalfHtml = createColumnHtml(firstHalf);
-      col1.innerHTML = firstHalfHtml + firstHalfHtml; // Original + Duplicate
-
-      const secondHalfHtml = createColumnHtml(secondHalf);
-      col2.innerHTML = secondHalfHtml + secondHalfHtml; // Original + Duplicate
-
+      }
     });
 
 

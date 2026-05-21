@@ -114,158 +114,30 @@
 
       <div class="container">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+        <div id="expandable-cards-list">
+          <!-- Populated by JavaScript -->
+        </div>
 
-          <!-- <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">Web App</li>
-            <li data-filter=".filter-product">Model</li>
-            <li data-filter=".filter-branding">Backend</li>
-            <li data-filter=".filter-books">Portfolio</li>
-          </ul>End Portfolio Filters -->
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-ai-ml">AI / ML</li>
-            <li data-filter=".filter-java-backend">Java Backend</li>
-            <li data-filter=".filter-full-stack">Full Stack</li>
-          </ul>
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-full-stack filter-ai-ml">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/logivoice-preview.jpg" class="img-fluid" alt="LogiVoice Preview">
-                <div class="portfolio-info">
-                  <h4>LogiVoice</h4>
-                  <p>AI-powered logistics document and voice assistant.</p>
-                  <a href="assets/img/portfolio/logivoice-preview.jpg" title="LogiVoice" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://github.com/Kanhaiya1610/LogiVoice" title="More Details" class="details-link" target="_blank"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
+        <!-- Modal Overlay -->
+        <div id="ec-modal-backdrop" class="ec-modal-backdrop">
+          <div class="ec-modal-content">
+            <button id="ec-modal-close" class="ec-close-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12"/><path d="M6 6l12 12"/></svg>
+            </button>
+            <div class="ec-modal-image-container">
+              <img id="ec-modal-image" src="" alt="">
             </div>
-            
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-java-backend">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/helio_teams_bkgrd_5_3.webp" class="img-fluid" alt="Space Weather API Preview">
-                <div class="portfolio-info">
-                  <h4>Space Weather Alert System</h4>
-                  <p>Reactive REST API aggregating NASA space weather data.</p>
-                  <a href="assets/img/portfolio/helio_teams_bkgrd_5_3.webp" title="Space Weather Alert System" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://github.com/Kanhaiya1610/Space-Weather-WebApp" title="More Details" class="details-link" target="_blank"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div> 
+            <div class="ec-modal-header">
+              <div>
+                <h3 id="ec-modal-title">Title</h3>
+                <p id="ec-modal-description">Description</p>
+              </div>
+              <a id="ec-modal-cta" href="#" target="_blank" class="ec-cta-btn">Play</a>
             </div>
-            
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai-ml">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/stock-predictor-preview.png" class="img-fluid" alt="Stock Predictor Preview">
-                <div class="portfolio-info">
-                  <h4>Stock Price Predictor</h4>
-                  <p>Generates LLM-based "Analyst Commentary" from technical indicators.</p>
-                  <a href="assets/img/portfolio/stock-predictor-preview.png" title="Stock Price Predictor" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://kanhaiya1610.github.io/Stock-Price-Predictor/" title="More Details" class="details-link" target="_blank"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
+            <div class="ec-modal-body">
+              <div id="ec-modal-content-details"></div>
             </div>
-           
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-full-stack filter-ai-ml">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/finance-ai-preview.jpg" class="img-fluid" alt="Finance AI Assistant Preview">
-                <div class="portfolio-info">
-                  <h4>Finance AI Assistant</h4>
-                  <p>Budget tracking and bill management with a secure Firebase backend.</p>
-                  <a href="assets/img/portfolio/finance-ai-preview.jpg" title="Finance AI Assistant" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://github.com/Kanhaiya1610/Finance-Ai-Assistant" title="More Details" class="details-link" target="_blank"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai-ml filter-full-stack">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/mental-health-chatbot-preview.jpg" class="img-fluid" alt="Mental Health Support Chatbot Preview">
-                <div class="portfolio-info">
-                  <h4>Mental Health Support Chatbot</h4>
-                  <p>A RAG-based chatbot using Gemini 1.5, LangChain & Streamlit.</p>
-                  <a href="assets/img/portfolio/mental-health-chatbot-preview.jpg" title="Mental Health Support Chatbot" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://github.com/Kanhaiya1610/Mental-Health-Chatbot" title="More Details" class="details-link" target="_blank"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/branding-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Branding 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/branding-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div> End Portfolio Item -->
-
-            <!--<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/books-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Books 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/books-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>End Portfolio Item -->
-
-            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>App 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/app-3.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>End Portfolio Item -->
-
-            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/product-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Product 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/product-3.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>End Portfolio Item -->
-
-            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/branding-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Branding 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/branding-3.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div> End Portfolio Item -->
-
-            <!--<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/books-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Books 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/books-3.jpg" title="Branding 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
+          </div>
         </div>
 
       </div>
@@ -320,6 +192,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/expandable-cards.js"></script>
 
   <!-- Light Rays Script -->
   <script src="https://resource.trickle.so/vendor_lib/ogl.iife.js"></script>
