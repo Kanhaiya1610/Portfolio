@@ -1,97 +1,57 @@
-# Kanhaiya Aggarwal's Portfolio Website
+# 👁️ Kanhaiya Aggarwal | AI/ML Portfolio
 
-A modern, responsive portfolio website built using Bootstrap 5.3.3. This portfolio showcases my skills, projects, and professional journey as a Backend Developer and AI/ML enthusiast.
+A highly stylized, multi-page portfolio built for an AI/ML Engineer. The interface is designed around the concept of a **"Detection Scene"**, treating the entire website as a computer-vision system looking at a cyberpunk-inspired Japanese/Arabic world.
+
+**🌐 Live Demo:** [https://Kanhaiya1610.github.io/Portfolio](https://Kanhaiya1610.github.io/Portfolio)
 
 ## 🚀 Features
 
-- **Responsive Design**: Fully responsive layout that works on all devices
-- **Modern UI**: Clean and professional design with smooth animations
-- **Portfolio Showcase**: Display projects with filtering capabilities
-- **Contact Form**: Integrated contact form for easy communication
-- **Social Media Integration**: Links to professional social media profiles
-- **Interactive Elements**: Animated sections and interactive components
-
-## 📋 Pages
-
-1. **Home**: Introduction and hero section
-2. **About**: Personal information and background
-3. **Resume**: Professional experience and education
-4. **Services**: Offered services and expertise
-5. **Projects**: Portfolio showcase with filtering
-6. **Contact**: Contact information and form
+- **Computer Vision Motif**: Interactive hover bounding boxes with system labels and confidence scores (e.g., `sys_nav 0.99`).
+- **Cross-Cultural Identity**: Integrates English, Japanese (vertical Tategaki & Hanko seals), and Arabic geometric backgrounds into a cohesive aesthetic.
+- **Data Vault**: A centralized hub (`cvs.html`) for accessing multiple localized CVs (English, Japanese Rirekisho, Video Pitch).
+- **Persistent Theme Engine**: Seamless switching between Dark and Light mode, remembering the user's preference across all pages via `localStorage`.
+- **Performance Focused**: Built entirely without heavy frameworks. Pure HTML, CSS, and vanilla JavaScript powered by GSAP for buttery smooth animations.
+- **Responsive Architecture**: Mobile-first grids that gracefully stack on smaller screens while intelligently disabling pointer-specific cursor logic.
 
 ## 🛠️ Technologies Used
 
 - HTML5
-- CSS3
-- Bootstrap 5.3.3
-- JavaScript
-- AOS (Animate On Scroll)
-- Swiper.js
-- GLightbox
-- Typed.js
-- PureCounter
-- Isotope
+- CSS3 (Vanilla, CSS Variables)
+- Vanilla JavaScript
+- GSAP & ScrollTrigger (Animations)
+- Bootstrap Icons
 
-## 📦 Installation
+## 📁 Core Structure
+
+- `index.html` — Hero Section & Identity
+- `about.html` — Personal Philosophy & Tech Stack
+- `resume.html` — Experience, Education, & Certifications
+- `services.html` — Professional Offerings
+- `portfolio.html` — Project Case Studies (FRIDAY, JLPT-RAG, etc.)
+- `gallery.html` — Interactive Image Grid with Webynize Comment System
+- `cvs.html` — The Data Vault
+- `contact.html` — Formspree Integration & Social Links
+- `styles.css` — Core Aesthetic System
+- `script.js` — Crosshairs, Sakura Particles, and GSAP Logic
+
+## 📦 Local Deployment
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Kanhaiya1610/portfolio.git
+git clone https://github.com/Kanhaiya1610/Portfolio.git
 ```
-
-2. Navigate to the project directory:
+2. Navigate to the directory:
 ```bash
-cd portfolio
+cd Portfolio
 ```
-
-3. Open `index.html` in your browser to view the website
-
-## 🎨 Customization
-
-### Changing Content
-- Update personal information in respective HTML files
-- Modify project details in `portfolio.html` and `portfolio-details.html`
-- Update social media links in the footer section
-
-### Styling
-- Main styles are in `assets/css/main.css`
-- Customize colors and fonts in the CSS file
-- Modify animations in the respective JavaScript files
-
-## 📸 Screenshots
-
-[Add screenshots of your website here]
-
-## 🔗 Live Demo
-
-[Add your live website URL here]
+3. Open `index.html` in your favorite browser. No build steps required.
 
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
-
-- Template by [BootstrapMade](https://bootstrapmade.com/)
-- Icons by [Bootstrap Icons](https://icons.getbootstrap.com/)
-- Fonts by [Google Fonts](https://fonts.google.com/)
-
 ## 📞 Contact
 
-Kanhaiya Aggarwal
-- Email: agarwalkanhaiya070@gmail.com
-- Phone: +91-8619224297
-- Location: Sadulpur, Churu, Rajasthan
-
-## 🌐 Social Media
-
-- [GitHub](https://github.com/Kanhaiya1610)
-- [LinkedIn](https://www.linkedin.com/in/kanhaiya-aggarwal)
-- [Instagram](https://www.instagram.com/kanhaiya.aggarwal.1610/)
-- [Threads](https://www.threads.net/@kanhaiya.aggarwal.1610)
-- [Pinterest](https://in.pinterest.com/kanhaiyaaggarwal/)
-
----
-
-Made with ❤️ by Kanhaiya Aggarwal
+- **Email:** klaggarwal1610@gmail.com
+- **LinkedIn:** [kanhaiya-aggarwal](https://www.linkedin.com/in/kanhaiya-aggarwal)
+- **GitHub:** [Kanhaiya1610](https://github.com/Kanhaiya1610)
