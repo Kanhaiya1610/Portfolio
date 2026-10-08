@@ -1,313 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Resume | Kanhaiya Aggarwal</title>
-  <meta name="description" content="Resume of Kanhaiya Aggarwal — AI/ML & Java Backend developer with production experience in Computer Vision, Spring Boot, and cloud-native applications.">
-  <meta name="keywords" content="Kanhaiya Aggarwal, resume, AI developer, ML engineer, Java, Spring Boot, Computer Vision, internship">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Personal
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Updated: Nov 04 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Kanhaiya Lal</title>
+    <meta name="description" content="Resume of Kanhaiya Lal, AI/ML Engineer.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
+<body data-theme="dark">
+    <!-- Background Layers -->
+    <div class="bg-girih"></div>
+    <canvas id="sakura-canvas"></canvas>
 
-<body class="resume-page">
-  <div id="light-rays-bg" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></div>
+    <!-- Custom CV Cursor -->
+    <div id="cursor-crosshair"></div>
+    <div id="cursor-bbox"></div>
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <div>
-          <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGlodWkzbTF6OGp6bXlkcjkxM2J3MWVrNWk1M3VkaWxjem9hODBtNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/IUNycHoVqvLDowiiam/giphy.gif" style="width: 85px" alt="">
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo bbox-container" data-label="sys_root 1.0"><a href="index.html">KANHAIYA_</a></div>
+            <div class="nav-links">
+                <a href="index.html" class="bbox-container" data-label="nav_home 1.0">Home</a>
+                <a href="about.html" class="bbox-container" data-label="nav_about 0.99">About</a>
+                <a href="resume.html" class="active bbox-container" data-label="nav_resume 0.95">Resume</a>
+                <a href="portfolio.html" class="bbox-container" data-label="nav_projects 0.98">Projects</a>
+                <a href="gallery.html" class="bbox-container" data-label="nav_gallery 0.85">Gallery</a>
+                <a href="cvs.html" class="bbox-container" data-label="nav_vault 0.99">CVs</a>
+                <a href="contact.html" class="bbox-container" data-label="nav_contact 0.90">Contact</a>
+            </div>
+            <button id="theme-toggle" class="bbox-container" data-label="theme_switch 0.99">Toggle Theme</button>
         </div>
-        <h1 class="sitename">Kanhaiya Aggarwal</h1>
-      </a>
+    </nav>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html" class="active">Resume</a></li>
-          <!-- <li><a href="services.html">Services</a></li> -->
-          <li><a href="portfolio.html">Projects</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li class="dropdown"><a href="#"><span>CVs</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <!-- <li><a href="#">Checkout CVs</a></li> -->
-              <li class="dropdown"><a href="#"><span>Checkout CVs</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <!-- <li><a href="https://docs.google.com/document/d/1g48zFSNRyRgCM79pQKdRiCPShC9dC3mV/edit?usp=sharing&ouid=111649025986708606787&rtpof=true&sd=true">View CV</a></li> -->
-                  <li><a href="assets/img/portfolio/Kanhaiya_CV.pdf" target="_blank">View CV</a></li>
-                  <li><a href="assets/img/portfolio/Kanhaiya_CV.docx" download="Kanhaiya_CV" >Download CV</a></li>
-                  <li><a href="#">View Video CV</a></li>
-                  <li><a href="#">Download Video CV</a></li>
-                  <!-- <li><a href="#">Deep Dropdown 5</a></li> -->
-                </ul>
-              </li>
-              <!-- <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li> -->
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+    <main>
+        <!-- EXPERIENCE SECTION -->
+        <section id="experience" class="fade-in">
+            <h2 class="section-title bbox-container" data-label="module_experience 0.96">Experience</h2>
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                <div class="scan-line"></div>
+                
+                <div class="timeline-item bbox-container" data-label="exp_technum 0.99">
+                    <h3>Computer Vision & AI Intern</h3>
+                    <h4>TECHNUM OPUS PVT LTD <span>// Oct 2025 — Jan 2026</span></h4>
+                    <p style="color: var(--cyan); margin-bottom: 10px; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem;">Enterprise Computer Vision & Security Systems + Predictive Analytics</p>
+                    <ul style="margin-bottom: 30px;">
+                        <li>Engineered two production-grade biometric security solutions: an AI-driven Face Attendance Platform and a Visitor Identity Verification System.</li>
+                        <li>Implemented robust security protocols including liveness detection (anti-spoofing), multi-frame verification, and government ID matching algorithms to ensure high-accuracy identity assurance.</li>
+                        <li>Designed a custom Computer Vision pipeline to automate dataset labelling (via Roboflow) and model training, successfully deploying object detection models for Trident (Client) to monitor manufacturing units and security systems.</li>
+                        <li>Developed predictive models to analyse sales, production, and maintenance datasets, enabling data-driven forecasting of market trends to optimize operational efficiency and reduce costs.</li>
+                    </ul>
+                </div>
 
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Resume</h1>
-              <p class="mb-0" style="text-align: justify; font-style: italic; font-family: Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Innovative AI/ML professional with a track record of transforming complex data into intelligent features. Expert in engineering Computer Vision pipelines and integrating Large Language Models into real-world applications like financial simulators and logistics assistants. Experienced in managing the full development lifecycle, from model training in Python to deploying supporting Java-based architectures. Dedicated to continuous improvement ('Kaizen') and high-performance collaboration, backed by success in state-level competitive sports.</p>
+                <div class="timeline-item bbox-container" data-label="trn_cipher 0.99">
+                    <h3>Java Full Stack Training</h3>
+                    <h4>Cipher School <span>// Feb 2025</span></h4>
+                    <ul>
+                        <li>Built end-to-end web apps using Core Java, Spring Boot, REST APIs, JDBC, MySQL, HTML/CSS/JavaScript.</li>
+                    </ul>
+                </div>
             </div>
-          </div>
+        </section>
+
+        <!-- RESEARCH & EDUCATION SECTION -->
+        <section id="research" class="fade-in">
+            <div class="split-section">
+                <div>
+                    <h2 class="section-title bbox-container" data-label="module_research 0.91">Research</h2>
+                    <div class="research-item bbox-container" data-label="paper_status_prep 0.99">
+                        <span class="status">IN PREPARATION</span>
+                        <h3>Multi-Agent Reinforcement Learning with Evolutionary Optimization for Algorithmic Trading on FRIDAY</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-dim); margin-top: 10px;">Proposes a novel DRL-based multi-asset trading framework incorporating Kelly Criterion risk sizing, LLM-driven sentiment analysis, and Monte Carlo stochastic back testing with ε-exploration noise across simultaneous GPU simulations.</p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="section-title bbox-container" data-label="module_certs 0.98">Certs & Education</h2>
+                    <ul class="cert-list">
+                        <li>IBM AI Engineering Professional Certificate (13 courses) - <em>Apr 2026</em></li>
+                        <li>Complete Machine Learning & Data Science Program - <em>July 2024</em></li>
+                        <li>Oracle Cloud Infrastructure 2023 AI Certified Foundations Associate - <em>Jun 2024</em></li>
+                        <li>Attended Workshop on Containers and AI/ML on AWS Cloud by AWS at IIT Roorkee - <em>Mar 2024</em></li>
+                        <li style="margin-top: 15px;"><strong>B.Tech CSE (ML Major, Japanese Minor)</strong><br>Lovely Professional University (2022 — 2026)<br><span style="font-size: 0.85rem; color: var(--text-dim);">CGPA: 7.58</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER / CONTACT -->
+    <footer id="contact" class="fade-in">
+        <div class="footer-content">
+            <div class="contact-info bbox-container" data-label="comm_link 1.0">
+                <a href="mailto:klaggarwal1610@gmail.com">klaggarwal1610@gmail.com</a>
+                <a href="https://github.com/Kanhaiya1610" target="_blank">github.com/Kanhaiya1610</a>
+                <a href="https://www.linkedin.com/in/kanhaiya-aggarwal" target="_blank">kanhaiya-aggarwal</a>
+            </div>
+            
+            <div class="culture-quotes">
+                <div class="lang-quote bbox-container" data-label="quote_ja 0.99">
+                    <p lang="ja">継続は力なり</p>
+                    <p class="trans">Persistence is power.</p>
+                </div>
+                <div class="lang-quote bbox-container" data-label="quote_ar 0.99">
+                    <p lang="ar" dir="rtl" class="arabic-text">العلم نور</p>
+                    <p class="trans">Knowledge is light.</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <nav class="breadcrumbs">
-        <div class="container">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Resume</li>
-          </ol>
-        </div>
-      </nav>
-    </div><!-- End Page Title -->
+    </footer>
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-
-      <div class="container">
-
-          <!-- <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Certifications</h3>
-            <div class="resume-item">
-              <a href="https://www.udemy.com/certificate/UC-dda2f2db-c1ee-4e7a-83ce-478f58975b90/"><h4>Full Stack Data Science Developer Course from scratch</h4></a>
-              <h5>August 2022</h5>
-              <p><em>Udemy</em></p>
-            </div>
-          
-
-            <div class="resume-item">
-              <a href="https://hyperstack.id/credential/155dd044-0e6c-42d0-abc6-ec0e0a1f3104"><h4>Workshop on Containers and AI/ML on AWS Cloud by AWS</h4></a>
-              <h5>March 2024</h5>
-              <p><em>IIT Roorkee Annual Technical Fest</em></p>
-              <p><em>Cognizance</em></p>
-            </div>
-
-            <div class="resume-item">
-              <a href="https://media.geeksforgeeks.org/courses/certificates/9d6e337822df251c3e2aab610cfbc2a9.pdf"><h4>Complete Machine Learning & Data Science Program</h4></a>
-              <h5>July 2024</h5>
-              <p><em>Geeksforgeeks</em></p>
-              <p>The Complete Machine Learning and Data Science Course by GeeksforGeeks covers data preprocessing, model building, deep learning, and real-world applications using Python, Scikit-Learn, TensorFlow, and more, preparing learners for AI-driven problem-solving and industry roles.</p>
-            </div>
-
-            <div class="resume-item">
-              <a href="www.linkedin.com/posts/kanhaiya-aggarwal_oracle-oci-ai-foundations-associate-certificate-activity-7210637933463187456-ssHH?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACEbvTQBf0IRnn3aFKJvWgPv-aVC8PH32Sk"><h4>Oracle Cloud Infrastructure 2023 AI Certified Foundations Associate</h4></a>
-              <h5>July 2024</h5>
-              <p><em>Oracle Academy</em></p>
-              <p>I learned AI and machine learning fundamentals in Oracle Cloud (OCI), including AI services, model training, deployment, and security best practices, enabling me to build cloud-based AI solutions.</p>
-            </div>
-
-          </div> -->
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Summary</h3>
-            <div class="resume-item pb-0">
-              <h4>Kanhaiya Aggarwal</h4>
-              <p><em>Final-year B.Tech CSE student building AI-enabled and Java-based software with a focus on practical, end-to-end delivery. Comfortable across Python/ML and Java/Spring to turn data and APIs into usable features with clean interfaces and measurable impact.</em></p>
-              <ul>
-                <li>Churu, Rajasthan, India</li>
-                <li><a href="https://www.linkedin.com/in/kanhaiya-aggarwal" target="_blank">linkedin.com/in/kanhaiya-aggarwal</a></li>
-                <li>klaggarwal1610@gmail.com</li>
-              </ul>
-            </div>
-          
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Bachelor of Engineering - BE, Computer Science</h4>
-              <h5>2022 - 2026</h5>
-              <p><em>Lovely Professional University, Punjab, India</em></p>
-            </div>
-            <div class="resume-item">
-              <h4>Senior Secondary Education</h4>
-              <h5>2020 - 2021</h5>
-              <p><em>Central Board of Secondary Education</em></p>
-            </div>
-            <div class="resume-item">
-            <h4>Higher Secondary</h4>
-            <h5>2017 - 2019</h5>
-            <p><em>Mohta Public School, Sadulpur, Churu</em></p>
-            <!-- <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p> -->
-          </div><!-- Edn Resume Item -->
-          </div>
-        
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Computer Vision & AI Intern</h4>
-              <h5>Oct 2024 - Jan 2025</h5>
-              <p><em>TECHNUM OPUS PVT LTD</em></p>
-              <ul>
-                <li>Engineered production-grade biometric security solutions: AI-driven Face Attendance and Visitor Identity Verification systems.</li>
-                <li>Implemented liveness detection (anti-spoofing), multi-frame verification, and government ID matching algorithms.</li>
-                <li>Designed a custom CV pipeline and deployed object detection models for Trident to monitor manufacturing units.</li>
-                <li>Developed predictive models for sales and production forecasting to optimize operational efficiency.</li>
-              </ul>
-            </div>
-
-            <h3 class="resume-title">Technical Skills</h3>
-            <div class="resume-item">
-              <ul>
-                <li><strong>Languages:</strong> Java, Python, SQL, NoSQL, Shell Scripting</li>
-                <li><strong>AI/ML:</strong> NLP, GenAI, Computer Vision, Deep Learning (TensorFlow, PyTorch, scikit-learn), GANs/VAEs</li>
-                <li><strong>Backend & Cloud:</strong> Spring Boot, REST APIs, Microservices, JSP, JDBC, AWS, OCI</li>
-                <li><strong>Tools & Platforms:</strong> Git, Docker, Maven, Firebase, Linux</li>
-                <li><strong>Databases:</strong> MySQL, MongoDB, PostgreSQL, H2</li>
-              </ul>
-            </div>
-            <h3 class="resume-title">Certifications</h3>
-            <div class="resume-item">
-              <a href="https://www.linkedin.com/posts/kanhaiya-aggarwal_oracle-oci-ai-foundations-associate-certificate-activity-7210637933463187456-ssHH" target="_blank">
-                <h4>Oracle Cloud Infrastructure 2023 AI Certified Foundations Associate</h4>
-              </a>
-              <p><em>Oracle</em></p>
-            </div>
-            <div class="resume-item">
-              <a href="https://hyperstack.id/credential/155dd044-0e6c-42d0-abc6-ec0e0a1f3104" target="_blank">
-                <h4>Workshop on Containers and AI/ML on AWS Cloud</h4>
-              </a>
-              <p><em>AWS at IIT Roorkee</em></p>
-            </div>
-            <div class="resume-item">
-              <a href="https://media.geeksforgeeks.org/courses/certificates/9d6e337822df251c3e2aab610cfbc2a9.pdf" target="_blank">
-                <h4>Complete Machine Learning & Data Science Program</h4>
-              </a>
-              <p><em>GeeksforGeeks</em></p>
-            </div>
-            <div class="resume-item">
-              <a href="#" target="_blank">
-                <h4>Java Full Stack</h4>
-              </a>
-              <p><em>Cipher School</em></p>
-            </div>
-          
-          </div>
-        
-        </div>
-
-      </div>
-
-    </section><!-- /Resume Section -->
-
-  </main>
-
-  <footer id="footer" class="footer dark-background">
-    <div class="container">
-      <h3 class="sitename">Kanhaiya Aggarwal</h3>
-      <p>Let's connect — I'm actively seeking Summer 2026 internship opportunities.</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://in.pinterest.com/kanhaiyaaggarwal/" target="_blank" rel="noopener"><i class="bi bi-pinterest"></i></a>
-        <a href="https://www.threads.net/@kanhaiya.aggarwal.1610" target="_blank" rel="noopener"><i class="bi bi-threads"></i></a>
-        <a href="https://www.instagram.com/kanhaiya.aggarwal.1610/" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
-        <a href="https://github.com/Kanhaiya1610" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/kanhaiya-aggarwal" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
-      </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Kanhaiya Aggarwal</strong> <span>All Rights Reserved</span>
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-  <!-- Light Rays Script -->
-  <script src="https://resource.trickle.so/vendor_lib/ogl.iife.js"></script>
-  <script src="assets/js/light-rays.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const container = document.getElementById('light-rays-bg');
-      if (container && typeof LightRays !== 'undefined') {
-        LightRays.init(container, {
-          raysColor: '#00f0ff',
-          raysSpeed: 0.8,
-          lightSpread: 1.2,
-          rayLength: 2.5,
-          pulsating: true,
-          fadeDistance: 1.2,
-          saturation: 1.0,
-          followMouse: true,
-          mouseInfluence: 0.1,
-          distortion: 0.0,
-          raysOrigin: 'top-center'
-        });
-      }
-    });
-  </script>
-
+    <!-- GSAP for Scroll Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>

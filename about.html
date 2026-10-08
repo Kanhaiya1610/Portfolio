@@ -1,604 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <!-- <title>All about Kanhaiya Aggarwal</title> -->
-  <title>About | Kanhaiya Aggarwal</title>
-  <meta name="description" content="Learn about Kanhaiya Aggarwal — AI/ML & Java Backend developer specializing in Computer Vision, Generative AI, and Spring Boot microservices.">
-  <meta name="keywords" content="Kanhaiya Aggarwal, about, AI developer, ML engineer, Java, Spring Boot, Computer Vision, portfolio">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Personal
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Updated: Nov 04 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Kanhaiya Lal</title>
+    <meta name="description" content="AI/ML Engineer, Computer Vision, and LLM Systems portfolio of Kanhaiya Lal.">
+    
+    <!-- Google Fonts for English, Japanese, Arabic, and Code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
+<body data-theme="dark">
+    <!-- Background Layers -->
+    <div class="bg-girih"></div>
+    <canvas id="sakura-canvas"></canvas>
 
-<body class="about-page">
-  <div id="light-rays-bg" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></div>
+    <!-- Custom CV Cursor -->
+    <div id="cursor-crosshair"></div>
+    <div id="cursor-bbox"></div>
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGlodWkzbTF6OGp6bXlkcjkxM2J3MWVrNWk1M3VkaWxjem9hODBtNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/IUNycHoVqvLDowiiam/giphy.gif" alt=""> -->
-        <div>
-          <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGlodWkzbTF6OGp6bXlkcjkxM2J3MWVrNWk1M3VkaWxjem9hODBtNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/IUNycHoVqvLDowiiam/giphy.gif" style="width: 85px" alt="">
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo bbox-container" data-label="sys_root 1.0"><a href="index.html">KANHAIYA_</a></div>
+            <div class="nav-links">
+                <a href="index.html" class="bbox-container" data-label="nav_home 1.0">Home</a>
+                <a href="about.html" class="active bbox-container" data-label="nav_about 0.99">About</a>
+                <a href="resume.html" class="bbox-container" data-label="nav_resume 0.95">Resume</a>
+                <a href="portfolio.html" class="bbox-container" data-label="nav_projects 0.98">Projects</a>
+                <a href="gallery.html" class="bbox-container" data-label="nav_gallery 0.85">Gallery</a>
+                <a href="cvs.html" class="bbox-container" data-label="nav_vault 0.99">CVs</a>
+                <a href="contact.html" class="bbox-container" data-label="nav_contact 0.90">Contact</a>
+            </div>
+            <button id="theme-toggle" class="bbox-container" data-label="theme_switch 0.99">Toggle Theme</button>
         </div>
-        <h1 class="sitename">Kanhaiya Aggarwal</h1>
-      </a>
+    </nav>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <!-- <li><a href="services.html">Services</a></li> -->
-          <li><a href="portfolio.html">Projects</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li class="dropdown"><a href="#"><span>CVs</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <!-- <li><a href="#">Checkout CVs</a></li> -->
-              <li class="dropdown"><a href="#"><span>Checkout CVs</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <!-- <li><a href="https://docs.google.com/document/d/1g48zFSNRyRgCM79pQKdRiCPShC9dC3mV/edit?usp=sharing&ouid=111649025986708606787&rtpof=true&sd=true">View CV</a></li> -->
-                  <li><a href="assets/img/portfolio/Kanhaiya_CV.pdf" target="_blank">View CV</a></li>
-                  <li><a href="assets/img/portfolio/Kanhaiya_CV.docx" download="Kanhaiya_CV" >Download CV</a></li>
-                  <li><a href="#">View Video CV</a></li>
-                  <li><a href="#">Download Video CV</a></li>
-                  <!-- <li><a href="#">Deep Dropdown 5</a></li> -->
-                </ul>
-              </li>
-              <!-- <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li> -->
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>About</h1>
-              <p class="mb-0" style="text-align: justify;">AI/ML & Java Backend developer with production experience in Computer Vision and biometric security systems. I blend Spring Boot microservices with Generative AI to build intelligent, end-to-end software — from model training in Python to deployment on AWS & OCI Cloud.</p>
+    <main>
+        <!-- ABOUT SECTION -->
+        <section id="about" class="fade-in">
+            <h2 class="section-title bbox-container" data-label="module_about 0.98">About</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="greeting">
+                        <span class="bbox-container" data-label="lang_en 1.0">Hello</span> / 
+                        <span class="bbox-container" lang="ja" data-label="lang_ja 1.0">こんにちは</span> / 
+                        <span class="bbox-container arabic-text" lang="ar" dir="rtl" data-label="lang_ar 1.0">أهلاً</span>
+                    </p>
+                    <p>I blend Spring Boot microservices with Generative AI to build intelligent, end-to-end software. From engineering production-grade biometric security systems to constructing deep learning pipelines, I transform complex data into high-fidelity AI features.</p>
+                </div>
+                <div class="lang-skills">
+                    <div class="lang-tag bbox-container" data-label="lang_en 0.99"><span>English</span> <span class="level">Advanced</span></div>
+                    <div class="lang-tag bbox-container" data-label="lang_hi 1.00"><span>Hindi</span> <span class="level">Native</span></div>
+                    <div class="lang-tag bbox-container" data-label="lang_ja 0.87"><span lang="ja">日本語</span> <span>N4 Level</span></div>
+                    <div class="lang-tag bbox-container" data-label="lang_ar 0.65"><span lang="ar" dir="rtl">العربية</span> <span>Elementary (Reading)</span></div>
+                </div>
             </div>
-          </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="fade-in">
+            <h2 class="section-title bbox-container" data-label="module_skills 1.00">Capabilities</h2>
+            <div class="skills-cluster" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                <div class="skill-category">
+                    <h3>Computer Vision</h3>
+                    <div class="tags">
+                        <span class="bbox-container" data-label="cv 0.99">OpenCV</span>
+                        <span class="bbox-container" data-label="cv 0.95">YOLO</span>
+                        <span class="bbox-container" data-label="cv 0.92">Liveness Detection</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>ML / DL & NLP</h3>
+                    <div class="tags">
+                        <span class="bbox-container" data-label="ml 0.98">PyTorch</span>
+                        <span class="bbox-container" data-label="ml 0.97">TensorFlow</span>
+                        <span class="bbox-container" data-label="nlp 0.94">LLMs / RAG</span>
+                        <span class="bbox-container" data-label="ml 0.90">Deep RL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend & Cloud</h3>
+                    <div class="tags">
+                        <span class="bbox-container" data-label="back 0.96">Java / Spring Boot</span>
+                        <span class="bbox-container" data-label="back 0.95">FastAPI</span>
+                        <span class="bbox-container" data-label="cloud 0.88">AWS / OCI</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER / CONTACT -->
+    <footer id="contact" class="fade-in">
+        <div class="footer-content">
+            <div class="contact-info bbox-container" data-label="comm_link 1.0">
+                <a href="mailto:klaggarwal1610@gmail.com">klaggarwal1610@gmail.com</a>
+                <a href="https://github.com/Kanhaiya1610" target="_blank">github.com/Kanhaiya1610</a>
+                <a href="https://www.linkedin.com/in/kanhaiya-aggarwal" target="_blank">kanhaiya-aggarwal</a>
+            </div>
+            
+            <div class="culture-quotes">
+                <div class="lang-quote bbox-container" data-label="quote_ja 0.99">
+                    <p lang="ja">継続は力なり</p>
+                    <p class="trans">Persistence is power.</p>
+                </div>
+                <div class="lang-quote bbox-container" data-label="quote_ar 0.99">
+                    <p lang="ar" dir="rtl" class="arabic-text">العلم نور</p>
+                    <p class="trans">Knowledge is light.</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <nav class="breadcrumbs">
-        <div class="container">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">About</li>
-          </ol>
-        </div>
-      </nav>
-    </div><!-- End Page Title -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/profile1.png" style="filter: brightness(90%) contrast(1.05); border: 3px solid #18d26e; border-radius: 8px;" class="img-fluid" alt="Kanhaiya Aggarwal profile photo">
-          </div>
-          <div class="col-lg-8 content">
-            <h2>AI/ML Developer &amp; Java Backend Engineer</h2>
-            <p class="fst-italic py-3">
-              Final-year B.Tech CSE student building AI-enabled and Java-based software with a focus on practical, end-to-end delivery. 
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>B.Tech Computer Science</span> </li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Graduation:</strong> <span>July 2026</span> </li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>klaggarwal1610@gmail.com</span> </li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Status:</strong> <span>Seeking Summer 2026 Internships</span> </li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>LinkedIn:</strong> <span><a href="https://www.linkedin.com/in/kanhaiya-aggarwal">kanhaiya-aggarwal</a></span> </li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Languages:</strong> <span>English, Hindi, Japanese (N4)</span> </li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Location:</strong> <span>Churu, Rajasthan, India</span> </li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Interests:</strong> <span>GenAI, Backend Services, Spring</span> </li>
-                </ul>
-              </div>
-            </div>
-            <p class="py-3" style="text-align: justify;">
-              Specializing in the intersection of Machine Learning and Computer Vision, I transform complex visual and textual data into high-fidelity AI features. My experience ranges from engineering production-grade biometric security systems with liveness detection to constructing end-to-end deep learning pipelines for generative models. I prioritize an iterative development cycle, consistently measuring success through model accuracy, inference latency, and real-world utility.
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Stats Section -->
-    <section id="stats" class="stats section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-journal-richtext"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Projects Built</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-award"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Certifications Earned</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-layers"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Tech Stacks Mastered</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-briefcase"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Industry Internship</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Stats Section -->
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <div><span>My</span> <span class="description-title">Skills</span></div>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content skills-animation">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Computer Vision</span> <i class="val">92%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-            <!-- <div class="progress">
-              <span class="skill"><span>JavaScript</span> <i class="val">65%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Python</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Scikit-Learn</span> <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>Java</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Spring-Boot</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <!-- <div class="progress">
-              <span class="skill"><span>JSP</span> <i class="val">65%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>MongoDB</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>PostgreSQL</span> <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Natural Language Processing</span> <i class="val">87%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Skills Section -->
-
-    <div class="container" style="padding: 30px 0; text-align: center;" data-aos="fade-up">
-      <img src="https://skillicons.dev/icons?i=python,tensorflow,flask,figma,java,js,kali,html,css,discord,pytorch,anaconda,docker,gmail,idea,sklearn,c,instagram,cpp,arch,eclipse,git,docker,cmake,fastapi,firebase,bash,github,aws,linux,spring,linkedin,linux,maven,mongodb,mysql,obsidian,opencv,postman,powershell,ros,stackoverflow,ubuntu,vscode,windows" alt="Technical skill icons" style="max-width: 100%;" />
-    </div>
-
-    <!-- Interests Section -->
-    <section id="interests" class="interests section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Features</h2>
-        <div><span>I'm</span> <span class="description-title">interested in</span></div>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="features-item">
-              <i class="bi bi-robot" style="color: #784af5;"></i>
-              <h3><a href="" class="stretched-link">Artificial intelligence</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="features-item">
-              <i class="bi bi-bezier2" style="color: #e95b23;"></i>
-              <h3><a href="" class="stretched-link">TensorFlow</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="features-item">
-              <i class="bi bi-steam" style="color: #e80368;"></i>
-              <h3><a href="" class="stretched-link">Game Development</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="features-item">
-              <i class="bi bi-bug" style="color: #e361ff;"></i>
-              <h3><a href="" class="stretched-link">Debugging</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="500">
-            <div class="features-item">
-              <i class="bi bi-calculator" style="color: #47aeff;"></i>
-              <h3><a href="" class="stretched-link">Automation</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="600">
-            <div class="features-item">
-              <i class="bi bi-camera2" style="color: #5ff073;"></i>
-              <h3><a href="" class="stretched-link">Computer Vision</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="700">
-            <div class="features-item">
-              <i class="bi bi-chat-left-dots" style="color: #11dbcf;"></i>
-              <h3><a href="" class="stretched-link">Encryption</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="800">
-            <div class="features-item">
-              <i class="bi bi-qr-code-scan" style="color: #d20909;"></i>
-              <h3><a href="" class="stretched-link">Authentication</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="900">
-            <div class="features-item">
-              <i class="bi bi-cloud-haze2" style="color: #deb6f4;"></i>
-              <h3><a href="" class="stretched-link">Cloud Computing</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1000">
-            <div class="features-item">
-              <i class="bi bi-currency-bitcoin" style="color: #ece117;"></i>
-              <h3><a href="" class="stretched-link">Blockchain</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1100">
-            <div class="features-item">
-              <i class="bi bi-key" style="color: #68dea3;"></i>
-              <h3><a href="" class="stretched-link">Authorisation</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1200">
-            <div class="features-item">
-              <i class="bi bi-motherboard" style="color: #8352b8;"></i>
-              <h3><a href="" class="stretched-link">VLSI</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Interests Section -->
-
-    <!-- 
-    <section id="testimonials" class="testimonials section">
-
-      
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <div><span>Check my</span> <span class="description-title">Testimonials</span></div>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper" data-speed="600" data-delay="5000">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 40
-                },
-                "1200": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 20
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" "="">
-            <p>
-              <i class=" bi bi-quote quote-icon-left"></i>
-                <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
-                <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-              </div>
-            </div>
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section> /Testimonials Section -->
-
-  </main>
-
-  <footer id="footer" class="footer dark-background">
-    <div class="container">
-      <h3 class="sitename">Kanhaiya Aggarwal</h3>
-      <p>Curious to see what I've built? Check out my projects or get in touch.</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://in.pinterest.com/kanhaiyaaggarwal/" target="_blank" rel="noopener"><i class="bi bi-pinterest"></i></a>
-        <a href="https://www.threads.net/@kanhaiya.aggarwal.1610" target="_blank" rel="noopener"><i class="bi bi-threads"></i></a>
-        <a href="https://www.instagram.com/kanhaiya.aggarwal.1610/" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
-        <a href="https://github.com/Kanhaiya1610" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/kanhaiya-aggarwal" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
-      </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Kanhaiya Aggarwal</strong> <span>All Rights Reserved</span>
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-  <!-- Light Rays Script -->
-  <script src="https://resource.trickle.so/vendor_lib/ogl.iife.js"></script>
-  <script src="assets/js/light-rays.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const container = document.getElementById('light-rays-bg');
-      if (container && typeof LightRays !== 'undefined') {
-        LightRays.init(container, {
-          raysColor: '#00f0ff',
-          raysSpeed: 0.8,
-          lightSpread: 1.2,
-          rayLength: 2.5,
-          pulsating: true,
-          fadeDistance: 1.2,
-          saturation: 1.0,
-          followMouse: true,
-          mouseInfluence: 0.1,
-          distortion: 0.0,
-          raysOrigin: 'top-center'
-        });
-      }
-    });
-  </script>
-
+    </footer>
+
+    <!-- GSAP for Scroll Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>

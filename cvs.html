@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Kanhaiya Lal</title>
-    <meta name="description" content="Services offered by Kanhaiya Lal">
+    <title>Data Vault | Kanhaiya Lal</title>
+    <meta name="description" content="Download CVs for Kanhaiya Lal">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,10 +27,10 @@
                 <a href="index.html" class="bbox-container" data-label="nav_home 1.0">Home</a>
                 <a href="about.html" class="bbox-container" data-label="nav_about 0.99">About</a>
                 <a href="resume.html" class="bbox-container" data-label="nav_resume 0.95">Resume</a>
-                <a href="services.html" class="active bbox-container" data-label="nav_services 0.97">Services</a>
+                <a href="services.html" class="bbox-container" data-label="nav_services 0.97">Services</a>
                 <a href="portfolio.html" class="bbox-container" data-label="nav_projects 0.98">Projects</a>
                 <a href="gallery.html" class="bbox-container" data-label="nav_gallery 0.85">Gallery</a>
-                <a href="cvs.html" class="bbox-container" data-label="nav_vault 0.99">CVs</a>
+                <a href="cvs.html" class="active bbox-container" data-label="nav_vault 0.99">CVs</a>
                 <a href="contact.html" class="bbox-container" data-label="nav_contact 0.90">Contact</a>
             </div>
             <button id="theme-toggle" class="bbox-container" data-label="theme_switch 0.99">Toggle Theme</button>
@@ -38,46 +38,34 @@
     </nav>
 
     <main>
-        <section id="services" class="fade-in">
-            <h2 class="section-title bbox-container" data-label="module_services 0.99">Services</h2>
-            <div class="services-grid">
-                
-                <div class="service-item bbox-container" data-label="svc_web 0.95">
-                    <div class="icon"><i class="bi bi-activity"></i></div>
-                    <h3>Web Development</h3>
-                    <p>Developing and maintaining websites and web applications using HTML, CSS, and JavaScript.</p>
-                </div>
+        <section id="vault" class="fade-in">
+            <h2 class="section-title bbox-container" data-label="module_vault 0.99">Data Vault</h2>
+            <p style="color: var(--text-dim); max-width: 600px; margin-bottom: 20px;">Access identity documents below. Select the appropriate format based on your system requirements.</p>
+            
+            <div class="vault-grid">
+                <!-- English CV -->
+                <a href="assets/img/portfolio/Kanhaiya_CV_Accenture.pdf" target="_blank" class="vault-file bbox-container" data-label="file_eng 1.0">
+                    <div class="vault-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+                    <h3>English_CV.pdf</h3>
+                    <p>Standard software engineering resume highlighting ML, backend, and full-stack projects.</p>
+                    <span class="vault-meta">VERIFIED // ENG</span>
+                </a>
 
-                <div class="service-item bbox-container" data-label="svc_spring 0.98">
-                    <div class="icon"><i class="bi bi-broadcast"></i></div>
-                    <h3>Spring-Boot Development</h3>
-                    <p>Developing and maintaining Spring-Boot applications. Using Spring Boot, Spring Data JPA, Spring Security, and Spring Boot Actuator.</p>
-                </div>
+                <!-- Japanese CV -->
+                <a href="assets/img/portfolio/Kanhaiya_Japanese_Resume.pdf" target="_blank" class="vault-file bbox-container" data-label="file_jpn 1.0">
+                    <div class="vault-icon"><i class="bi bi-file-earmark-person"></i></div>
+                    <h3>Rirekisho.pdf</h3>
+                    <p>Japanese format resume (履歴書) for roles based in Japan or requiring N4 level Japanese.</p>
+                    <span class="vault-meta">VERIFIED // JPN</span>
+                </a>
 
-                <div class="service-item bbox-container" data-label="svc_ml 1.0">
-                    <div class="icon"><i class="bi bi-easel"></i></div>
-                    <h3>Machine Learning</h3>
-                    <p>Developing and maintaining machine learning models. Using Python, PyTorch, TensorFlow, and Keras.</p>
-                </div>
-
-                <div class="service-item bbox-container" data-label="svc_data 0.92">
-                    <div class="icon"><i class="bi bi-bounding-box-circles"></i></div>
-                    <h3>Data Science</h3>
-                    <p>Developing data science projects via Python. Built models using Scikit-learn, Pandas, NumPy, and Matplotlib.</p>
-                </div>
-
-                <div class="service-item bbox-container" data-label="svc_cyber 0.89">
-                    <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-                    <h3>Cyber Security</h3>
-                    <p>Developing and maintaining cyber security projects. Using tools like Metasploit, Burp Suite, and Nmap.</p>
-                </div>
-
-                <div class="service-item bbox-container" data-label="svc_genai 0.99">
-                    <div class="icon"><i class="bi bi-chat-square-text"></i></div>
-                    <h3>Generative AI</h3>
-                    <p>Developing generative AI architectures. Utilizing open-source LLMs, OpenAI API, and RAG frameworks.</p>
-                </div>
-
+                <!-- Video CV -->
+                <a href="#" class="vault-file bbox-container" data-label="file_vid 0.88">
+                    <div class="vault-icon"><i class="bi bi-play-circle"></i></div>
+                    <h3>Video_Pitch.mp4</h3>
+                    <p>A quick 60-second video introduction outlining my passion for AI and bridging cultures.</p>
+                    <span class="vault-meta">IN PRODUCTION // MP4</span>
+                </a>
             </div>
         </section>
     </main>

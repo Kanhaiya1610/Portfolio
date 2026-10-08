@@ -1,639 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Gallery | Kanhaiya Aggarwal</title>
-  <meta name="description" content="Gallery of certificates, achievements, and memorable moments from Kanhaiya Aggarwal's journey in AI/ML and software development.">
-  <meta name="keywords" content="Kanhaiya Aggarwal, gallery, certificates, achievements, AI developer">
-
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdn.commento.io/css/commento.css">
-
-  <style>
-    /* Commento Section Styles */
-    .commento-section {
-      padding: 20px;
-      margin-bottom: 30px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-    }
-
-    .commento-section h2 {
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    /* Custom Commento Styles */
-    .commento-root .commento-main-area {
-      background: transparent !important;
-    }
-
-    .commento-root .commento-card {
-      background: rgba(255, 255, 255, 0.05) !important;
-      border-radius: 10px !important;
-      margin-bottom: 15px !important;
-      padding: 15px !important;
-      border: 1px solid rgba(74, 27, 166, 0.2) !important;
-    }
-
-    .commento-root .commento-name {
-      color: #4a1ba6 !important;
-      font-weight: 600 !important;
-    }
-
-    .commento-root .commento-timeago {
-      color: #666 !important;
-      font-size: 0.9em !important;
-    }
-
-    /* Custom Upvote/Downvote Styles */
-    .commento-root .commento-votes {
-      display: flex !important;
-      align-items: center !important;
-      gap: 10px !important;
-      margin-top: 10px !important;
-    }
-
-    .commento-root .commento-vote-button {
-      background: none !important;
-      border: none !important;
-      padding: 5px !important;
-      cursor: pointer !important;
-      transition: transform 0.2s !important;
-    }
-
-    .commento-root .commento-vote-button:hover {
-      transform: scale(1.2) !important;
-    }
-
-    .commento-root .commento-vote-button i {
-      font-size: 1.2em !important;
-      color: #4a1ba6 !important;
-    }
-
-    .commento-root .commento-vote-button.upvoted i {
-      color: #28a745 !important;
-    }
-
-    .commento-root .commento-vote-button.downvoted i {
-      color: #dc3545 !important;
-    }
-
-    /* Custom Vote Count */
-    .commento-root .commento-vote-count {
-      font-size: 0.9em !important;
-      color: #666 !important;
-      font-weight: 600 !important;
-    }
-
-    /* Custom Reply Button */
-    .commento-root .commento-reply-button {
-      background: #4a1ba6 !important;
-      color: white !important;
-      border: none !important;
-      padding: 5px 15px !important;
-      border-radius: 5px !important;
-      font-size: 0.9em !important;
-      transition: background 0.3s !important;
-    }
-
-    .commento-root .commento-reply-button:hover {
-      background: #6b3cc9 !important;
-    }
-
-    /* Custom Textarea */
-    .commento-root .commento-textarea {
-      background: rgba(255, 255, 255, 0.1) !important;
-      border: 1px solid rgba(74, 27, 166, 0.2) !important;
-      border-radius: 5px !important;
-      color: #333 !important;
-      padding: 10px !important;
-      font-size: 1em !important;
-    }
-
-    .commento-root .commento-textarea:focus {
-      border-color: #4a1ba6 !important;
-      box-shadow: 0 0 0 2px rgba(74, 27, 166, 0.2) !important;
-    }
-
-    /* Custom Submit Button */
-    .commento-root .commento-submit-button {
-      background: #4a1ba6 !important;
-      color: white !important;
-      border: none !important;
-      padding: 10px 20px !important;
-      border-radius: 5px !important;
-      font-size: 1em !important;
-      transition: background 0.3s !important;
-    }
-
-    .commento-root .commento-submit-button:hover {
-      background: #6b3cc9 !important;
-    }
-
-    /* Custom Login Box */
-    .commento-root .commento-login-box {
-      background: rgba(255, 255, 255, 0.05) !important;
-      border-radius: 10px !important;
-      padding: 20px !important;
-      border: 1px solid rgba(74, 27, 166, 0.2) !important;
-    }
-
-    /* Custom Login Buttons */
-    .commento-root .commento-login-button {
-      background: #4a1ba6 !important;
-      color: white !important;
-      border: none !important;
-      padding: 8px 15px !important;
-      border-radius: 5px !important;
-      font-size: 0.9em !important;
-      transition: background 0.3s !important;
-    }
-
-    .commento-root .commento-login-button:hover {
-      background: #6b3cc9 !important;
-    }
-
-    /* Login Modal Styles */
-    .login-modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.7);
-      z-index: 9999;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .login-modal-content {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      max-width: 400px;
-      width: 90%;
-      text-align: center;
-      position: relative;
-    }
-
-    .login-modal-close {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 24px;
-      cursor: pointer;
-      color: #666;
-    }
-
-    .login-options {
-      margin-top: 20px;
-    }
-
-    .login-option {
-      display: block;
-      margin: 10px 0;
-      padding: 10px;
-      background: #4a1ba6;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-
-    .login-option:hover {
-      background: #6b3cc9;
-      color: white;
-    }
-
-    /* Custom Moderation Menu (Hamburger Style) */
-    .commento-root .commento-options-button {
-      background: none !important;
-      border: none !important;
-      color: #4a1ba6 !important;
-      font-size: 1.2em !important;
-      cursor: pointer !important;
-      padding: 5px !important;
-      display: flex !important;
-      align-items: center !important;
-    }
-
-    .commento-root .commento-options-dropdown {
-      background: #1a1a1a !important;
-      border: 1px solid rgba(74, 27, 166, 0.3) !important;
-      border-radius: 5px !important;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.5) !important;
-      z-index: 100 !important;
-    }
-
-    .commento-root .commento-option-item {
-      color: white !important;
-      padding: 8px 15px !important;
-      transition: background 0.2s !important;
-    }
-
-    .commento-root .commento-option-item:hover {
-      background: rgba(74, 27, 166, 0.3) !important;
-    }
-
-    /* Nested Replies Hidden by Default */
-    .commento-root .commento-body-replies {
-      display: none;
-      margin-left: 20px !important;
-      border-left: 2px solid rgba(74, 27, 166, 0.2) !important;
-      padding-left: 15px !important;
-    }
-
-    .commento-root .commento-show-replies-button {
-      background: none !important;
-      border: none !important;
-      color: #4a1ba6 !important;
-      font-size: 0.9em !important;
-      font-weight: 600 !important;
-      cursor: pointer !important;
-      padding: 5px 0 !important;
-      margin-top: 10px !important;
-      display: flex !important;
-      align-items: center !important;
-      gap: 5px !important;
-    }
-
-    .commento-root .commento-show-replies-button i {
-      transition: transform 0.3s !important;
-    }
-
-    .commento-root .commento-show-replies-button.active i {
-      transform: rotate(180deg) !important;
-    }
-
-    /* Responsive Gallery Styles */
-    @media (max-width: 768px) {
-      .gallery-container {
-        flex-direction: column;
-        height: auto !important;
-        overflow: visible !important;
-      }
-
-      .gallery-column {
-        flex: none;
-        width: 100%;
-      }
-
-      .gallery-column .gallery-scroll {
-        position: relative !important;
-        animation: none !important;
-      }
-
-      .gallery-item {
-        margin: 20px 0 !important;
-        padding: 15px !important;
-        width: 100% !important;
-      }
-
-      .gallery-item img {
-        width: 100% !important;
-        height: auto !important;
-      }
-
-      /* Add spacing between gallery and comment section for mobile */
-      .gallery.section {
-        margin-bottom: 50px !important;
-      }
-
-      .commento-section {
-        margin-top: 30px !important;
-        padding: 15px !important;
-      }
-
-      /* Improve comment section readability on mobile */
-      .commento-root .commento-card {
-        padding: 12px !important;
-        margin-bottom: 20px !important;
-      }
-
-      .commento-root .commento-textarea {
-        font-size: 16px !important; /* Prevent zoom on iOS */
-      }
-
-      /* Adjust button sizes for better touch targets */
-      .commento-root .commento-submit-button,
-      .commento-root .commento-reply-button,
-      .commento-root .commento-login-button {
-        padding: 12px 20px !important;
-        font-size: 16px !important;
-      }
-    }
-
-    /* Keep desktop styles unchanged */
-    @media (min-width: 769px) {
-      .gallery-container {
-        height: 100vh !important;
-        overflow: hidden !important;
-      }
-
-      .gallery-column .gallery-scroll {
-        position: absolute !important;
-      }
-
-      .gallery-column.scroll-down .gallery-scroll {
-        animation: scroll-down 90s linear infinite !important;
-      }
-
-      .gallery-column.scroll-up .gallery-scroll {
-        animation: scroll-up 90s linear infinite !important;
-      }
-
-      .gallery-column:hover .gallery-scroll {
-        animation-play-state: paused !important;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Kanhaiya Lal</title>
+    <meta name="description" content="Gallery of certificates and achievements">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- GLightbox CSS -->
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    
+    <!-- Webynize Comments CSS Override -->
+    <style>
+        .commento-section .wbnz-comments { background: transparent; }
+    </style>
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="gallery-page">
-  <div id="light-rays-bg" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></div>
+<body data-theme="dark">
+    <div class="bg-girih"></div>
+    <canvas id="sakura-canvas"></canvas>
+    <div id="cursor-crosshair"></div>
+    <div id="cursor-bbox"></div>
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <div>
-          <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGlodWkzbTF6OGp6bXlkcjkxM2J3MWVrNWk1M3VkaWxzem9hODBtNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/IUNycHoVqvLDowiiam/giphy.gif" style="width: 85px" alt="">
-        </div>
-        <h1 class="sitename">Kanhaiya Aggarwal</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="portfolio.html">Projects</a></li>
-          <li><a href="gallery.html" class="active">Gallery</a></li>
-          <li class="dropdown"><a href="#"><span>CVs</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li class="dropdown"><a href="#"><span>Checkout CVs</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="assets/img/portfolio/Kanhaiya_CV.pdf" target="_blank">View CV</a></li>
-                  <li><a href="assets/img/portfolio/Kanhaiya_CV.docx" download="Kanhaiya_CV">Download CV</a></li>
-                  <li><a href="#">View Video CV</a></li>
-                  <li><a href="#">Download Video CV</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-    </div>
-  </header>
-
-  <main class="main">
-    <div class="page-title" data-aos="fade">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Gallery</h1>
-              <p class="mb-0">A showcase of my certificates, achievements, and memorable moments</p>
+    <nav>
+        <div class="nav-content">
+            <div class="logo bbox-container" data-label="sys_root 1.0"><a href="index.html">KANHAIYA_</a></div>
+            <div class="nav-links">
+                <a href="index.html" class="bbox-container" data-label="nav_home 1.0">Home</a>
+                <a href="about.html" class="bbox-container" data-label="nav_about 0.99">About</a>
+                <a href="resume.html" class="bbox-container" data-label="nav_resume 0.95">Resume</a>
+                <a href="services.html" class="bbox-container" data-label="nav_services 0.97">Services</a>
+                <a href="portfolio.html" class="bbox-container" data-label="nav_projects 0.98">Projects</a>
+                <a href="gallery.html" class="active bbox-container" data-label="nav_gallery 0.85">Gallery</a>
+                <a href="cvs.html" class="bbox-container" data-label="nav_vault 0.99">CVs</a>
+                <a href="contact.html" class="bbox-container" data-label="nav_contact 0.90">Contact</a>
             </div>
-          </div>
+            <button id="theme-toggle" class="bbox-container" data-label="theme_switch 0.99">Toggle Theme</button>
         </div>
-      </div>
-      <nav class="breadcrumbs">
-        <div class="container">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Gallery</li>
-          </ol>
-        </div>
-      </nav>
-    </div>
+    </nav>
 
-    <section class="gallery section">
-      <div class="container-fluid">
-        <div class="cyber-gallery-grid" id="cyber-gallery-grid">
-          <!-- Populated by JavaScript -->
-        </div>
-      </div>
-    </section>
-
-    <section class="commento-section">
-      <div class="container">
-        <h2>Comments & Questions</h2>
-        <p style="text-align: center; color: rgba(255,255,255,0.7); margin-bottom: 25px;">Have a question or want to share feedback? Drop a comment below — I'd love to hear from you.</p>
-        <div class='wbnz-comments' data-webynize-id='9712'></div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Login Modal -->
-  <div id="loginModal" class="login-modal">
-    <div class="login-modal-content">
-      <span class="login-modal-close" onclick="closeLoginModal()">&times;</span>
-      <h3>Login to Comment</h3>
-      <p>Please log in to join the discussion.</p>
-      <div class="login-options">
-        <a href="#" class="login-option" onclick="loginWithGoogle()">
-          <i class="bi bi-google me-2"></i> Login with Google
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <footer id="footer" class="footer dark-background">
-    <div class="container">
-      <h3 class="sitename">Kanhaiya Aggarwal</h3>
-      <p>Enjoyed the gallery? Feel free to leave a comment or connect with me on social media.</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://in.pinterest.com/kanhaiyaaggarwal/" target="_blank" rel="noopener"><i class="bi bi-pinterest"></i></a>
-        <a href="https://www.threads.net/@kanhaiya.aggarwal.1610" target="_blank" rel="noopener"><i class="bi bi-threads"></i></a>
-        <a href="https://www.instagram.com/kanhaiya.aggarwal.1610/" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
-        <a href="https://github.com/Kanhaiya1610" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/kanhaiya-aggarwal" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
-      </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Kanhaiya Aggarwal</strong> <span>All Rights Reserved</span>
-        </div>
-        <div class="credits">
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <div id="preloader"></div>
-
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-  <!-- Webynize Comments JS -->
-  <script defer src='https://widgets.webynize.com/comments.js'></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const galleryItems = [
-        { src: "assets/img/gallery/certificate1.png", alt: "Certificate 1", caption: "Java Full Stack Certification" },
-        { src: "assets/img/gallery/linkedin-post1.jpg", alt: "LinkedIn Post 1", caption: "Last Lecture of Basic Japanese(Semester 6)" },
-        { src: "assets/img/gallery/certificate2.png", alt: "Certificate 2", caption: "MongoDB Data Modeling Intro Certificate" },
-        { src: "assets/img/gallery/certificate3.png", alt: "Certificate 3", caption: "Oracle Certified Foundations Associate, Certificate" },
-        { src: "assets/img/gallery/linkedin-post2.png", alt: "LinkedIn Post 2", caption: "Malware Distribution in Cyber Security" },
-        { src: "assets/img/gallery/linkedin-post3.png", alt: "LinkedIn Post 3", caption: "Japanese Calligraphy Class" },
-        { src: "assets/img/gallery/certificate4.png", alt: "Certificate 4", caption: "Machine Learning Course Certificate by NPTEL" },
-        { src: "assets/img/gallery/certificate5.jpg", alt: "Certificate 5", caption: "Applied Generative AI Certification" },
-        { src: "assets/img/gallery/Linkedin-post4.jpg", alt: "Linkedin-post4", caption: "Last Day of Japanese Lecture(Semester 5)" },
-        { src: "assets/img/gallery/linkedin-post5.jpg", alt: "Linkedin-post5", caption: "At Annual Technical Fest, Cognizance, IIT ROORKEE" },
-        { src: "assets/img/gallery/post6.jpg", alt: "Linkedin-post6", caption: "Travelled to India Gate with friends, New Delhi" }
-      ];
-
-      const gridContainer = document.getElementById('cyber-gallery-grid');
-      
-      let html = '';
-      galleryItems.forEach(item => {
-        html += `
-          <a href="${item.src}" class="glightbox gallery-item-link" data-gallery="gallery-collection" data-title="${item.caption}">
-            <div class="gallery-item-cyber">
-              <img src="${item.src}" alt="${item.alt}" class="img-fluid">
-              <div class="gallery-caption-cyber">
-                <span>${item.caption}</span>
-              </div>
+    <main>
+        <section id="gallery" class="fade-in">
+            <h2 class="section-title bbox-container" data-label="module_gallery 0.99">Visual Data Logs</h2>
+            <p style="color: var(--text-dim);">A showcase of my certificates, achievements, and memorable moments</p>
+            
+            <div class="cyber-gallery-grid" id="cyber-gallery-grid">
+                <!-- Populated by JavaScript -->
             </div>
-          </a>
-        `;
-      });
-      
-      gridContainer.innerHTML = html;
-      
-      // Initialize GLightbox
-      if (typeof GLightbox !== 'undefined') {
-        const lightbox = GLightbox({
-          selector: '.glightbox'
+        </section>
+
+        <!-- Webynize Comments Section -->
+        <section class="commento-section fade-in bbox-container" data-label="sys_feedback 1.0">
+            <h2>Comments & Feedback Log</h2>
+            <p style="text-align: center; color: var(--text-dim); margin-bottom: 25px;">Input your query or feedback below.</p>
+            <div class='wbnz-comments' data-webynize-id='9712'></div>
+        </section>
+    </main>
+
+    <footer id="contact" class="fade-in">
+        <div class="footer-content">
+            <div class="contact-info bbox-container" data-label="comm_link 1.0">
+                <a href="mailto:klaggarwal1610@gmail.com">klaggarwal1610@gmail.com</a>
+                <a href="https://github.com/Kanhaiya1610" target="_blank">github.com/Kanhaiya1610</a>
+                <a href="https://www.linkedin.com/in/kanhaiya-aggarwal" target="_blank">kanhaiya-aggarwal</a>
+            </div>
+            
+            <div class="culture-quotes">
+                <div class="lang-quote bbox-container" data-label="quote_ja 0.99">
+                    <p lang="ja">継続は力なり</p>
+                    <p class="trans">Persistence is power.</p>
+                </div>
+                <div class="lang-quote bbox-container" data-label="quote_ar 0.99">
+                    <p lang="ar" dir="rtl" class="arabic-text">العلم نور</p>
+                    <p class="trans">Knowledge is light.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    
+    <!-- GLightbox JS -->
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    
+    <!-- Gallery Grid Populator -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryItems = [
+                { src: "assets/img/gallery/certificate1.png", alt: "Certificate 1", caption: "Java Full Stack Certification" },
+                { src: "assets/img/gallery/linkedin-post1.jpg", alt: "LinkedIn Post 1", caption: "Last Lecture of Basic Japanese" },
+                { src: "assets/img/gallery/certificate2.png", alt: "Certificate 2", caption: "MongoDB Data Modeling" },
+                { src: "assets/img/gallery/certificate3.png", alt: "Certificate 3", caption: "Oracle Certified Foundations" },
+                { src: "assets/img/gallery/linkedin-post2.png", alt: "LinkedIn Post 2", caption: "Malware Distribution in Cyber Security" },
+                { src: "assets/img/gallery/linkedin-post3.png", alt: "LinkedIn Post 3", caption: "Japanese Calligraphy Class" },
+                { src: "assets/img/gallery/certificate4.png", alt: "Certificate 4", caption: "Machine Learning Course by NPTEL" },
+                { src: "assets/img/gallery/certificate5.jpg", alt: "Certificate 5", caption: "Applied Generative AI" },
+                { src: "assets/img/gallery/Linkedin-post4.jpg", alt: "Linkedin-post4", caption: "Last Day of Japanese Lecture" },
+                { src: "assets/img/gallery/linkedin-post5.jpg", alt: "Linkedin-post5", caption: "Cognizance, IIT ROORKEE" },
+                { src: "assets/img/gallery/post6.jpg", alt: "Linkedin-post6", caption: "India Gate, New Delhi" }
+            ];
+
+            const gridContainer = document.getElementById('cyber-gallery-grid');
+            let html = '';
+            
+            galleryItems.forEach(item => {
+                html += `
+                    <a href="${item.src}" class="glightbox" data-title="${item.caption}">
+                        <div class="gallery-item-cyber">
+                            <img src="${item.src}" alt="${item.alt}">
+                            <div class="gallery-caption-cyber">
+                                <span>${item.caption}</span>
+                            </div>
+                        </div>
+                    </a>
+                `;
+            });
+            
+            gridContainer.innerHTML = html;
+            
+            if (typeof GLightbox !== 'undefined') {
+                GLightbox({ selector: '.glightbox' });
+            }
         });
-      }
-    });
-
-
-    // Show login modal when clicking comment box
-    document.addEventListener('DOMContentLoaded', function() {
-      const commentBox = document.querySelector('.commento-textarea');
-      if (commentBox) {
-        commentBox.addEventListener('click', function(e) {
-          e.preventDefault();
-          showLoginModal();
-        });
-      }
-    });
-
-    // Login Modal Functions
-    function showLoginModal() {
-      document.getElementById('loginModal').style.display = 'flex';
-    }
-
-    function closeLoginModal() {
-      document.getElementById('loginModal').style.display = 'none';
-    }
-
-    // Login Functions
-    function loginWithGoogle() {
-      // Implement Google login
-      closeLoginModal();
-    }
-
-    function loginWithGitHub() {
-      // Implement GitHub login
-      closeLoginModal();
-    }
-
-    function loginWithEmail() {
-      // Implement Email login
-      closeLoginModal();
-    }
-
-    // Close modal when clicking outside
-    window.onclick = function(event) {
-      const modal = document.getElementById('loginModal');
-      if (event.target == modal) {
-        closeLoginModal();
-      }
-    }
-
-    // Webynize Content Observer
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.addedNodes.length > 0) {
-          handleNewComments();
-        }
-      });
-    });
-
-    function handleNewComments() {
-      // Webynize uses different classes, but we'll monitor for the container
-      const commentsContainer = document.querySelector('.wbnz-comments');
-      if (commentsContainer) {
-        // Apply any custom behavioral overrides if needed here
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const targetNode = document.querySelector('.wbnz-comments');
-      if (targetNode) {
-        observer.observe(targetNode, { childList: true, subtree: true });
-      }
-    });
-  </script>
-
-  <!-- Light Rays Script -->
-  <script src="https://resource.trickle.so/vendor_lib/ogl.iife.js"></script>
-  <script src="assets/js/light-rays.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const container = document.getElementById('light-rays-bg');
-      if (container && typeof LightRays !== 'undefined') {
-        LightRays.init(container, {
-          raysColor: '#00f0ff',
-          raysSpeed: 0.8,
-          lightSpread: 1.2,
-          rayLength: 2.5,
-          pulsating: true,
-          fadeDistance: 1.2,
-          saturation: 1.0,
-          followMouse: true,
-          mouseInfluence: 0.1,
-          distortion: 0.0,
-          raysOrigin: 'top-center'
-        });
-      }
-    });
-  </script>
-
+    </script>
+    
+    <!-- Webynize Comments JS -->
+    <script defer src='https://widgets.webynize.com/comments.js'></script>
 </body>
 </html>

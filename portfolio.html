@@ -1,223 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Projects | Kanhaiya Aggarwal</title>
-  <meta name="description" content="Projects by Kanhaiya Aggarwal — AI/ML, Computer Vision, and Java Backend projects including LogiVoice, Stock Predictor, and Space Weather API.">
-  <meta name="keywords" content="Kanhaiya Aggarwal, projects, portfolio, AI, ML, Java, Spring Boot, Python, Computer Vision">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Personal
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Updated: Nov 04 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Kanhaiya Lal</title>
+    <meta name="description" content="AI/ML Engineer, Computer Vision, and LLM Systems portfolio of Kanhaiya Lal.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
+<body data-theme="dark">
+    <!-- Background Layers -->
+    <div class="bg-girih"></div>
+    <canvas id="sakura-canvas"></canvas>
 
-<body class="portfolio-page">
-  <div id="light-rays-bg" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></div>
+    <!-- Custom CV Cursor -->
+    <div id="cursor-crosshair"></div>
+    <div id="cursor-bbox"></div>
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <div>
-          <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGlodWkzbTF6OGp6bXlkcjkxM2J3MWVrNWk1M3VkaWxjem9hODBtNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/IUNycHoVqvLDowiiam/giphy.gif" style="width: 85px" alt="">
-        </div>
-        <h1 class="sitename">Kanhaiya Aggarwal</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <!-- <li><a href="services.html">Services</a></li> -->
-          <li><a href="portfolio.html" class="active">Projects</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li class="dropdown"><a href="#"><span>CVs</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <!-- <li><a href="#">Checkout CVs</a></li> -->
-              <li class="dropdown"><a href="#"><span>Checkout CVs</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <!-- <li><a href="https://docs.google.com/document/d/1g48zFSNRyRgCM79pQKdRiCPShC9dC3mV/edit?usp=sharing&ouid=111649025986708606787&rtpof=true&sd=true">View CV</a></li> -->
-                  <li><a href="assets/img/portfolio/Kanhaiya_CV.pdf" target="_blank">View CV</a></li>
-                  <li><a href="assets/img/portfolio/Kanhaiya_CV.docx" download="Kanhaiya_CV" >Download CV</a></li>
-                  <li><a href="#">View Video CV</a></li>
-                  <li><a href="#">Download Video CV</a></li>
-                  <!-- <li><a href="#">Deep Dropdown 5</a></li> -->
-                </ul>
-              </li>
-              <!-- <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li> -->
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Portfolio</h1>
-              <p class="mb-0">A selection of my projects showcasing my skills in AI/ML development with Python and backend services with Java and Spring Boot.</p>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo bbox-container" data-label="sys_root 1.0"><a href="index.html">KANHAIYA_</a></div>
+            <div class="nav-links">
+                <a href="index.html" class="bbox-container" data-label="nav_home 1.0">Home</a>
+                <a href="about.html" class="bbox-container" data-label="nav_about 0.99">About</a>
+                <a href="resume.html" class="bbox-container" data-label="nav_resume 0.95">Resume</a>
+                <a href="portfolio.html" class="active bbox-container" data-label="nav_projects 0.98">Projects</a>
+                <a href="gallery.html" class="bbox-container" data-label="nav_gallery 0.85">Gallery</a>
+                <a href="cvs.html" class="bbox-container" data-label="nav_vault 0.99">CVs</a>
+                <a href="contact.html" class="bbox-container" data-label="nav_contact 0.90">Contact</a>
             </div>
-          </div>
+            <button id="theme-toggle" class="bbox-container" data-label="theme_switch 0.99">Toggle Theme</button>
         </div>
-      </div>
-      <nav class="breadcrumbs">
-        <div class="container">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Portfolio</li>
-          </ol>
-        </div>
-      </nav>
-    </div><!-- End Page Title -->
+    </nav>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
+    <main>
+        <!-- PROJECTS (MANGA) SECTION -->
+        <section id="projects" class="fade-in">
+            <h2 class="section-title bbox-container" data-label="module_projects 0.99">Projects</h2>
+            <div class="manga-grid">
+                
+                <!-- Project 1: FRIDAY -->
+                <article class="manga-panel panel-friday bbox-container" data-label="prj_friday 0.97">
+                    <div class="speed-lines"></div>
+                    <div class="screentone"></div>
+                    <div class="panel-content">
+                        <div class="speech-bubble">
+                            <h3>FRIDAY</h3>
+                            <p>Autonomous Stock Trading Agent (Deep RL)</p>
+                        </div>
+                        <div class="panel-details">
+                            <ul>
+                                <li>Designed and trained custom DQN and LSTM-DQN agents in PyTorch for the Indian stock market, engineering a 15-dimensional state space (RSI, MACD, Bollinger Bands, Fibonacci levels, Residual Z-Score) with a composite reward function incorporating anti-churn penalties, drawdown minimization, and risk-adjusted returns.</li>
+                                <li>Built an Evolutionary Arena Tournament system where multiple agent personas compete over rolling evaluation windows; top performers are selected via Sharpe Ratio and Total Return, then reproduced through Gaussian weight mutation.</li>
+                                <li>Implemented a Universal Multi-Asset Trainer using curriculum learning across 50+ NSE/BSE tickers with environment rotation per episode, enabling a single market-agnostic RL model to generalize across stocks and timeframes, with CUDA-accelerated parallel inference powering a Monte Carlo engine.</li>
+                                <li>Integrated an LLM-augmented sentiment pipeline using Google Gemini Flash to score Yahoo Finance RSS headlines into a continuous sentiment signal (–1.0 to +1.0) injected directly into the RL agent's state vector, with a 30-minute cache and multi-key fallback.</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span>PyTorch</span> <span>Deep RL</span> <span>Gemini API</span>
+                            </div>
+                            <a href="https://github.com/Kanhaiya1610/FRIDAY" target="_blank" class="manga-btn bbox-container" data-label="link 1.0">View Source</a>
+                        </div>
+                    </div>
+                </article>
 
-      <div class="container">
+                <!-- Project 2: JLPT-RAG -->
+                <article class="manga-panel panel-jlpt bbox-container" data-label="prj_jlpt 0.89">
+                    <div class="screentone"></div>
+                    <div class="panel-content">
+                        <div class="speech-bubble">
+                            <h3>JLPT-RAG</h3>
+                            <p>Level-Adaptive Japanese Q&A</p>
+                        </div>
+                        <div class="panel-details">
+                            <ul>
+                                <li>Built an end-to-end Retrieval-Augmented Generation system over a 400-chunk multilingual (English/Japanese) corpus spanning six anime franchises, MEXT/JASSO scholarship documentation, and JLPT vocabulary/grammar references.</li>
+                                <li>Designed a query parser that extracts the requested JLPT proficiency level (N5–N1) from natural-language queries, and implemented multilingual semantic retrieval using Sentence-Transformers embeddings over a FAISS vector index.</li>
+                                <li>Fine-tuned Llama 3.2 3B with 4-bit QLoRA (PEFT) to generate responses calibrated to the requested JLPT level, conditioning vocabulary and grammar complexity through level-specific system prompts.</li>
+                                <li>Implemented a FAISS-based semantic cache with cosine-similarity thresholding, achieving a 100% hit rate on repeated/paraphrased queries and a 157x reduction in response latency.</li>
+                                <li>Built a baseline-vs-fine-tuned evaluation harness combining a deterministic MeCab-tokenized JLPT-compliance scorer with an LLM-as-judge faithfulness checker.</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span>Llama 3.2</span> <span>FAISS</span> <span>RAG</span>
+                            </div>
+                            <a href="https://colab.research.google.com/drive/1i9kNIh8I5y22ZF2GHx504FD9B4-LCMAr?usp=sharing" target="_blank" class="manga-btn bbox-container" data-label="link 1.0">View Colab</a>
+                        </div>
+                    </div>
+                </article>
 
-        <div id="expandable-cards-list">
-          <!-- Populated by JavaScript -->
-        </div>
+                <!-- Project 3: LogiVoice -->
+                <article class="manga-panel panel-logi bbox-container" data-label="prj_logi 0.94">
+                    <div class="screentone"></div>
+                    <div class="panel-content">
+                        <div class="speech-bubble">
+                            <h3>LogiVoice</h3>
+                            <p>Smart Logistics Doc & Voice Assistant</p>
+                        </div>
+                        <div class="panel-details">
+                            <ul>
+                                <li>Developed a full-stack web application leveraging AI-powered automation to streamline logistics document workflows, significantly reducing manual effort.</li>
+                                <li>Implemented multimodal AI capabilities through voice command processing, real-time translation, and document intelligence for PDF extraction, automatic document type detection, and barcode/QR code recognition.</li>
+                                <li>Designed a user-centric, mobile-friendly dashboard that enabled bulk PDF uploads and incorporated advanced features like annotation tools and searchable/exportable data tables.</li>
+                                <li>Utilized NLP and integrated OCR (Tesseract), Google Translate, and speech recognition to facilitate robust multilingual and multimodal input/output.</li>
+                                <li>Engineered a persistent command and data history with efficient memory management, enhancing system usability and data integrity using Python (Flask), JavaScript, and Bootstrap.</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span>Flask</span> <span>OCR</span> <span>Voice API</span>
+                            </div>
+                            <a href="https://github.com/Kanhaiya1610/LogiVoice" target="_blank" class="manga-btn bbox-container" data-label="link 1.0">View Source</a>
+                        </div>
+                    </div>
+                </article>
 
-        <!-- Modal Overlay -->
-        <div id="ec-modal-backdrop" class="ec-modal-backdrop">
-          <div class="ec-modal-content">
-            <button id="ec-modal-close" class="ec-close-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12"/><path d="M6 6l12 12"/></svg>
-            </button>
-            <div class="ec-modal-image-container">
-              <img id="ec-modal-image" src="" alt="">
             </div>
-            <div class="ec-modal-header">
-              <div>
-                <h3 id="ec-modal-title">Title</h3>
-                <p id="ec-modal-description">Description</p>
-              </div>
-              <a id="ec-modal-cta" href="#" target="_blank" class="ec-cta-btn">Play</a>
+        </section>
+    </main>
+
+    <!-- FOOTER / CONTACT -->
+    <footer id="contact" class="fade-in">
+        <div class="footer-content">
+            <div class="contact-info bbox-container" data-label="comm_link 1.0">
+                <a href="mailto:klaggarwal1610@gmail.com">klaggarwal1610@gmail.com</a>
+                <a href="https://github.com/Kanhaiya1610" target="_blank">github.com/Kanhaiya1610</a>
+                <a href="https://www.linkedin.com/in/kanhaiya-aggarwal" target="_blank">kanhaiya-aggarwal</a>
             </div>
-            <div class="ec-modal-body">
-              <div id="ec-modal-content-details"></div>
+            
+            <div class="culture-quotes">
+                <div class="lang-quote bbox-container" data-label="quote_ja 0.99">
+                    <p lang="ja">継続は力なり</p>
+                    <p class="trans">Persistence is power.</p>
+                </div>
+                <div class="lang-quote bbox-container" data-label="quote_ar 0.99">
+                    <p lang="ar" dir="rtl" class="arabic-text">العلم نور</p>
+                    <p class="trans">Knowledge is light.</p>
+                </div>
             </div>
-          </div>
         </div>
+    </footer>
 
-      </div>
-
-    </section><!-- /Portfolio Section -->
-
-  </main>
-
-  <footer id="footer" class="footer dark-background">
-    <div class="container">
-      <h3 class="sitename">Kanhaiya Aggarwal</h3>
-      <p>Interested in collaborating? Feel free to reach out for projects and freelance work.</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://in.pinterest.com/kanhaiyaaggarwal/" target="_blank" rel="noopener"><i class="bi bi-pinterest"></i></a>
-        <a href="https://www.threads.net/@kanhaiya.aggarwal.1610" target="_blank" rel="noopener"><i class="bi bi-threads"></i></a>
-        <a href="https://www.instagram.com/kanhaiya.aggarwal.1610/" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
-        <a href="https://github.com/Kanhaiya1610" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/kanhaiya-aggarwal" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
-      </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Kanhaiya Aggarwal</strong> <span>All Rights Reserved</span>
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/expandable-cards.js"></script>
-
-  <!-- Light Rays Script -->
-  <script src="https://resource.trickle.so/vendor_lib/ogl.iife.js"></script>
-  <script src="assets/js/light-rays.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const container = document.getElementById('light-rays-bg');
-      if (container && typeof LightRays !== 'undefined') {
-        LightRays.init(container, {
-          raysColor: '#00f0ff',
-          raysSpeed: 0.8,
-          lightSpread: 1.2,
-          rayLength: 2.5,
-          pulsating: true,
-          fadeDistance: 1.2,
-          saturation: 1.0,
-          followMouse: true,
-          mouseInfluence: 0.1,
-          distortion: 0.0,
-          raysOrigin: 'top-center'
-        });
-      }
-    });
-  </script>
-
+    <!-- GSAP for Scroll Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>

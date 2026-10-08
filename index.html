@@ -1,171 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <!-- <title>Kanhaiya's Bootstrap Portfolio</title> -->
-  <title>Kanhaiya Aggarwal | AI/ML & Java Developer</title>
-  <meta name="description" content="Kanhaiya Aggarwal — AI/ML & Java Developer. Building intelligent systems with Python, Spring Boot, Computer Vision, and Generative AI.">
-  <meta name="keywords" content="Kanhaiya Aggarwal, AI developer, ML engineer, Java developer, Spring Boot, Python, Computer Vision, portfolio">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Personal
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Updated: Nov 04 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanhaiya Lal | AI/ML Engineer</title>
+    <meta name="description" content="AI/ML Engineer, Computer Vision, and LLM Systems portfolio of Kanhaiya Lal.">
+    
+    <!-- Google Fonts for English, Japanese, Arabic, and Code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
+<body data-theme="dark">
+    <!-- Background Layers -->
+    <div class="bg-girih"></div>
+    <canvas id="sakura-canvas"></canvas>
 
-<body class="index-page">
-  <!-- <div id="particles-js"></div> -->
+    <!-- Custom CV Cursor -->
+    <div id="cursor-crosshair"></div>
+    <div id="cursor-bbox"></div>
 
-
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo --> 
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-         <div>
-          <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGlodWkzbTF6OGp6bXlkcjkxM2J3MWVrNWk1M3VkaWxjem9hODBtNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/IUNycHoVqvLDowiiam/giphy.gif" style="width: 85px" alt="">
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo bbox-container" data-label="sys_root 1.0"><a href="index.html">KANHAIYA_</a></div>
+            <div class="nav-links">
+                <a href="index.html" class="active bbox-container" data-label="nav_home 1.0">Home</a>
+                <a href="about.html" class="bbox-container" data-label="nav_about 0.99">About</a>
+                <a href="resume.html" class="bbox-container" data-label="nav_resume 0.95">Resume</a>
+                <a href="portfolio.html" class="bbox-container" data-label="nav_projects 0.98">Projects</a>
+                <a href="gallery.html" class="bbox-container" data-label="nav_gallery 0.85">Gallery</a>
+                <a href="cvs.html" class="bbox-container" data-label="nav_vault 0.99">CVs</a>
+                <a href="contact.html" class="bbox-container" data-label="nav_contact 0.90">Contact</a>
+            </div>
+            <button id="theme-toggle" class="bbox-container" data-label="theme_switch 0.99">Toggle Theme</button>
         </div>
-        <h1 class="sitename">Portfolio</h1>
-      </a>
+    </nav>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <!-- <li><a href="services.html">Services</a></li> -->
-          <li><a href="portfolio.html">Projects</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li class="dropdown"><a href="#"><span>CVs</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <!-- <li><a href="#">Checkout CVs</a></li> -->
-              <li class="dropdown"><a href="#"><span>Checkout CVs</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="assets/img/portfolio/Kanhaiya_CV1.pdf" target="_blank">View CV</a></li>
-                  <li><a href="assets/img/portfolio/Kanhaiya_CV1.pdf" download="Kanhaiya_CV" >Download CV</a></li>
-                  <li><a href="#">View Video CV</a></li>
-                  <li><a href="#">Download Video CV</a></li>
-                  <!-- <li><a href="#">Deep Dropdown 5</a></li> -->
-                </ul>
-              </li>
-              <!-- <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li> -->
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+    <main>
+        <!-- HERO SECTION -->
+        <section id="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="terminal">
+                        <span class="prompt">$ whoami</span><br>
+                        <span id="typed-text"></span><span class="cursor">_</span>
+                    </div>
+                    <h1>Kanhaiya Lal</h1>
+                    <p class="tagline">AI / ML Engineer · Computer Vision · LLM Systems</p>
+                    
+                    <div class="ctas">
+                        <a href="portfolio.html" class="btn bbox-container" data-label="nav_projects 0.95">View Projects</a>
+                        <a href="assets/img/portfolio/Kanhaiya_CV_Accenture.pdf" target="_blank" class="btn btn-outline bbox-container" data-label="dl_resume 0.99">Download Resume</a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual bbox-container" data-label="target_acquired 0.99">
+                    <!-- User Profile Image -->
+                    <img src="Kanhaiya1.jpeg" alt="Kanhaiya Lal" style="width: 100%; border-radius: 8px; border: 2px solid var(--primary); box-shadow: 8px 8px 0 var(--border); display: block;">
+                    <!-- Japanese Tategaki Accent (Kanji Name) -->
+                    <div class="tategaki" lang="ja" style="font-size: 1.8rem; letter-spacing: 0.1em; line-height: 1.2;">愃癈耶<br>瘂鵞籠鐚挵</div>
+                    <!-- Hanko Seal -->
+                    <div class="hanko bbox-container" data-label="auth_seal 1.0">愃</div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/portfolio_with_image.png" alt="Kanhaiya Aggarwal — AI/ML & Java Developer" data-aos="fade-in">
-      <!-- <img src="assets/img/portfolio/portfolio.gif" alt="" data-aos="fade-in">  -->
-
-      <div class="container" data-aos="zoom-out" data-aos-delay="100">
-        <h2>Kanhaiya Aggarwal</h2>
-        <p>I build with <span class="typed" data-typed-items="Java & Spring Boot, Python & Machine Learning, Generative AI, AWS & OCI Cloud">Java & Spring Boot</span><span class="typed-cursor typed-cursor--blink"></span></p>
-        <div class="social-links">
-          <a href="https://github.com/Kanhaiya1610" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
-          <a href="https://www.threads.net/@kanhaiya.aggarwal.1610" target="_blank" rel="noopener"><i class="bi bi-threads"></i></a>
-          <a href="https://www.instagram.com/kanhaiya.aggarwal.1610/" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/kanhaiya-aggarwal" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+    <!-- FOOTER / CONTACT -->
+    <footer id="contact" class="fade-in">
+        <div class="footer-content">
+            <div class="contact-info bbox-container" data-label="comm_link 1.0">
+                <a href="mailto:klaggarwal1610@gmail.com">klaggarwal1610@gmail.com</a>
+                <a href="https://github.com/Kanhaiya1610" target="_blank">github.com/Kanhaiya1610</a>
+                <a href="https://www.linkedin.com/in/kanhaiya-aggarwal" target="_blank">kanhaiya-aggarwal</a>
+            </div>
+            
+            <div class="culture-quotes">
+                <div class="lang-quote bbox-container" data-label="quote_ja 0.99">
+                    <p lang="ja">継続は力なり</p>
+                    <p class="trans">Persistence is power.</p>
+                </div>
+                <div class="lang-quote bbox-container" data-label="quote_ar 0.99">
+                    <p lang="ar" dir="rtl" class="arabic-text">العلم نور</p>
+                    <p class="trans">Knowledge is light.</p>
+                </div>
+            </div>
         </div>
-      </div>
+    </footer>
 
-    </section><!-- /Hero Section -->
-
-  </main>
-
-  <footer id="footer" class="footer dark-background">
-    <div class="container">
-      <h3 class="sitename">Kanhaiya Aggarwal</h3>
-      <p>Final-year B.Tech CSE student building intelligent systems with Python/ML and Java/Spring Boot. Open to Summer 2026 internships and collaborations.</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://in.pinterest.com/kanhaiyaaggarwal/" target="_blank" rel="noopener"><i class="bi bi-pinterest"></i></a>
-        <a href="https://www.threads.net/@kanhaiya.aggarwal.1610" target="_blank" rel="noopener"><i class="bi bi-threads"></i></a>
-        <a href="https://www.instagram.com/kanhaiya.aggarwal.1610/" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
-        <a href="https://github.com/Kanhaiya1610" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/kanhaiya-aggarwal" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
-      </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Kanhaiya Aggarwal</strong> <span>All Rights Reserved</span>
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-  <!-- particles.js lib -->
-  <!-- <script src="assets/js/particles.js-master/particles.min.js"></script>
-  <!-- Your config 
-  <script>
-    particlesJS.load('particles-js', 'particles.json', function() {
-      console.log('particles.js loaded');
-    });
-  </script> -->
-
-
+    <!-- GSAP for Scroll Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
